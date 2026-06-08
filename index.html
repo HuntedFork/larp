@@ -1,29 +1,80 @@
-<html><head>
-    <title>Summer Larp Event</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <style>
-    body,h1 {font-family: "Raleway", sans-serif}
-    body, html {height: 100%}
-    .bgimg {
-      background-image: url('https://w3schools.com/w3images/forestbridge.jpg');
-      min-height: 100%;
-      background-position: center;
-      background-size: cover;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LARP Docs</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #1a1a2e;
+      color: #e0d7c6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
     }
-    </style>
-    </head>
-    <body data-extension-installed="2.4.11">
-    
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-      <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:40%">
-        <p class="w3-large w3-center">When: August Something</p>
-        <p class="w3-large w3-center">Where: Mccollum Park</p>
-        <p class="w3-large w3-center"><a href="https://discord.gg/3Th2JP37">Join the discord</a></p>
-      </div>
-    </div>
-    </body></html>
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25em;
+      color: #f0e6d3;
+    }
+
+    p.subtitle {
+      color: #a09080;
+      margin-bottom: 2.5em;
+      font-style: italic;
+    }
+
+    .doc-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .doc-link {
+      display: block;
+      padding: 1.5rem 2.5rem;
+      background: #2a2040;
+      border: 1px solid #5a4a7a;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #e0d7c6;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, border-color 0.2s;
+      text-align: center;
+    }
+
+    .doc-link:hover {
+      background: #3a3060;
+      border-color: #9a7abf;
+    }
+
+    .doc-link .icon {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚔️ LARP Reference Docs</h1>
+  <p class="subtitle">Printable game reference sheets</p>
+  <nav class="doc-links">
+    <a class="doc-link" href="docs/potions/">
+      <span class="icon">🧪</span>
+      Potions
+    </a>
+    <a class="doc-link" href="docs/mishaps/">
+      <span class="icon">💥</span>
+      Mishaps
+    </a>
+  </nav>
+</body>
+</html>
