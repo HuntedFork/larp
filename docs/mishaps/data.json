@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Lorem Ipsum",
+    "effect": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore."
+  },
+  {
+    "name": "Dolor Sit Amet",
+    "effect": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+  },
+  {
+    "name": "Consectetur Elit",
+    "effect": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "name": "Sed Do Eiusmod",
+    "effect": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+  },
+  {
+    "name": "Tempor Incididunt",
+    "effect": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+  },
+  {
+    "name": "Ut Labore Magna",
+    "effect": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur."
+  },
+  {
+    "name": "Dolore Et Aliqua",
+    "effect": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit."
+  },
+  {
+    "name": "Quis Nostrud",
+    "effect": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam nisi."
+  }
+]

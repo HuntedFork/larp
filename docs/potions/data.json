@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Lorem Ipsum",
+    "ingredients": ["Lorem ipsum", "Dolor sit amet", "Consectetur"],
+    "effect": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "name": "Dolor Sit Amet",
+    "ingredients": ["Adipiscing elit", "Sed do eiusmod", "Tempor incididunt"],
+    "effect": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "name": "Consectetur Adipiscing",
+    "ingredients": ["Ut labore", "Et dolore magna", "Aliqua enim"],
+    "effect": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "name": "Sed Do Eiusmod",
+    "ingredients": ["Excepteur sint", "Occaecat cupidatat", "Non proident"],
+    "effect": "Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus."
+  },
+  {
+    "name": "Tempor Incididunt",
+    "ingredients": ["Nemo enim ipsam", "Voluptatem quia", "Voluptas sit"],
+    "effect": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit."
+  },
+  {
+    "name": "Ut Labore Dolore",
+    "ingredients": ["Quia consequuntur", "Magni dolores", "Ratione sequi"],
+    "effect": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid."
+  }
+]

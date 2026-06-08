@@ -1,0 +1,135 @@
+/* ============================================================
+   Shared print stylesheet for LARP card pages
+   ============================================================ */
+
+/* --- Page setup --- */
+@page {
+  size: letter portrait;
+  margin: 0.5in;
+}
+
+/* --- Base reset for print pages --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* --- Screen-only: page preview styling --- */
+@media screen {
+  body {
+    background: #e8e4de;
+    padding: 1rem;
+  }
+
+  #card-container {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.5in;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+}
+
+/* ============================================================
+   Card grid layouts
+   ============================================================ */
+
+/* --- Potions: 2 columns × 3 rows = 6 per page --- */
+.card-grid.potions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+/* --- Mishaps: 2 columns × 4 rows = 8 per page --- */
+.card-grid.mishaps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+/* ============================================================
+   Card base styles
+   ============================================================ */
+
+.card {
+  border: none;
+  border-radius: 0;
+  padding: 0.15in 0.2in;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  background: #fff;
+}
+
+.card-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 0.06in 0;
+  color: #2a1a0a;
+  border-bottom: 1px solid #c8b89a;
+  padding-bottom: 0.04in;
+}
+
+.card-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7a6a5a;
+  margin: 0.05in 0 0.02in 0;
+}
+
+.card-value {
+  font-size: 0.8rem;
+  color: #2a1a0a;
+  margin: 0;
+  line-height: 1.5;
+  min-height: 0.6in;
+}
+
+/* ============================================================
+   Potion-specific styles
+   ============================================================ */
+
+.card.potion {
+  min-height: 1.5in;
+}
+
+.card.potion .card-name {
+  font-size: 1.05rem;
+}
+
+.card.potion .ingredients-list {
+  margin: 0;
+  padding-left: 1em;
+  font-size: 0.8rem;
+  color: #2a1a0a;
+  line-height: 1.5;
+}
+
+.card.potion .card-value {
+  min-height: 0.8in;
+}
+
+/* ============================================================
+   Mishap-specific styles
+   ============================================================ */
+
+.card.mishap {
+  min-height: 1.1in;
+}
+
+.card.mishap .card-name {
+  font-size: 0.95rem;
+}
+
+.card.mishap .card-value {
+  font-size: 0.78rem;
+  min-height: 0.6in;
+}
