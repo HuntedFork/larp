@@ -108,3 +108,10 @@ body {
   padding: 0.01in 0.04in;
   border-radius: 2px;
 }
+
+#ritual-content img {
+  display: block;
+  max-width: 2in;
+  height: auto;
+  margin: 0.1in 0;
+}
