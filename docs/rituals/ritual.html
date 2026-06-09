@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritual — LARP Reference</title>
+  <link rel="stylesheet" href="./ritual-print.css">
+</head>
+<body>
+  <div id="ritual-content">
+    <!-- Ritual markdown is rendered here -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get('file');
+      const content = document.getElementById('ritual-content');
+
+      if (!file) {
+        content.innerHTML = '<p><em>No ritual file specified. Use <code>?file=filename</code> in the URL.</em></p>';
+        return;
+      }
+
+      try {
+        const response = await fetch(`./files/${file}.md`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const markdown = await response.text();
+        content.innerHTML = marked.parse(markdown);
+        // Set page title to the first h1 in the document, if present
+        const h1 = content.querySelector('h1');
+        if (h1) document.title = h1.textContent + ' — LARP Reference';
+      } catch (err) {
+        content.innerHTML = `<p style="color:red;">Failed to load ritual: ${err.message}</p>`;
+      }
+    })();
+  </script>
+</body>
+</html>
