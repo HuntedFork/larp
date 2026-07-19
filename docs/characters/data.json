@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Justice",
+    "subtitle": "A fair and impartial Judge, of contest and character",
+    "body": "You are a justice! You have trained for years in Law, the Code Duello, and Honorable Conduct.\n\nStarting Resources: 4 coins"
+  },
+  {
+    "name": "Healer",
+    "subtitle": "Hailing from the tower of Caduceus, you bring mercy to the injured",
+    "body": "You have been trained in the ways of a healer and medic. You can bring people back from near death.\n\nStarting Resources: 1 coin\n\n**Power: Heal**\nSpend 30 seconds roleplaying healing someone who has been injured then show them this power.\n\nThey are healed and can move normally.\n\n(Normally, someone who has been injured must roleplay being injured, and cant move faster than a walk nor fight)\n\n(You may heal yourself, but not while you are near combat)"
+  },
+  {
+    "name": "Scion",
+    "copies": 2,
+    "subtitle": "You're rich.",
+    "body": "You're rich, and you want everyone to know it.\n\nStarting Equipment: 12 coins\n\n**Power: Have a Tip**\nWhen someone does something you told them to:\nPay them 1 extra coin (On top of what you agreed to)\n\nNo person can be the target of this power more than once per hour.\n\n**Power: My Loyal Second**\nIf someone agrees to be your second, show them this power.\n\nAny time someone challenges you to a duel or contest, you may have your second take your place. If you do, you receive all rewards and consequences of your contest still, but it is your second who participates.\n(You may only have one second at a time)"
+  },
+  {
+    "name": "Scoundrel",
+    "subtitle": "You don't mind being a villain",
+    "body": "Starting Equipment: 0 coins\n\n**Item: Spinefish Venom**\nYou coat your blades in venom. Show this to a player before you fight them.\n\n\"My blades are coated in venom! After I strike you roleplay feeling weak and woozy for 15 minutes or until a healer attends to you. You don't know you've been poisoned, only that you don't feel very good\"\n\nLimited supply: You can only use this power once\nBuy some more: You can use it one more time each time you put one of your coins back in the money vessel.\nSell it: You can tear this power off your sheet to sell it."
+  },
+  {
+    "name": "Smuggler",
+    "subtitle": "You don't mind being a villain",
+    "body": "**Power: Pickpocket**\nYou pickpocket someone. Show this to another player and guess one of their pockets. If they have any silver in that pocket, they must give you one of them.\n\nCan never be used on the same player twice\n\n**Item: The Goods**\nYou have the goods. You got them from your supplier. Someone in this town wants them and you'll make a pretty penny if you can figure out who.\n\nBut you know someone else is on to your scent. If they find out you got The Goods they'll bring the law down on you.\n\nYou can tear this off your character sheet to give it to someone."
+  },
+  {
+    "name": "Merchant",
+    "subtitle": "You like buying and selling things.",
+    "body": "Starting Equipment: 5 silver\n\nIf, at any time you acquire the item 'The Goods,' you can turn it in to the table and take 10 silver from the vessel. But be careful, The Goods are very illegal. If you're found to be looking for them there could be a hefty fine!\n\nYou may tear any of the following items off your character sheet in order to trade them to other players, or use them yourself.\n\n**Item: Clue Fragment**\nA fragment from an old journal. Turn in 3 clue fragments at the npc station to get a clue.\n\n**Item: Healing Potion**\nIf you are injured you may use this item up while saying 'glug glug glug' to be no longer injured\n\n**Item: Cursed Amulet**\nAs long as you have this amulet in your possession, you can't say your own name."
+  },
+  {
+    "name": "Merchant",
+    "subtitle": "You like buying and selling things.",
+    "body": "Starting Equipment: 5 silver\n\n**Power: Sell Potion**\nYou may use up a potion (as though it had been used) in order to take 2 silver from the vessel. Keep the potion folded in half as a reminder it has been used.\n\nYou may tear any of the following items off your character sheet in order to trade them to other players, or use them yourself.\n\n**Item: Clue Fragment**\nA fragment from an old journal. Turn in 3 clue fragments at the npc station to get a clue.\n\n**Item: Healing Potion - One Use**\nIf you are injured you may use this while saying 'glug glug glug' to be no longer injured\n\n**Item: Lumber**\nA person trying to found a township can turn in lumber at the end of the game to count as 5 silver toward their goal."
+  },
+  {
+    "name": "Constable",
+    "subtitle": "You want to enforce the laws",
+    "body": "You're good at arresting people (but not actually arresting them)\n\nStarting Equipment: 2 coins\n\n**Power: Make Jail**\nUse your foot and draw a circle in the dirt. That's the jail.\nYou can have multiple jail cells, but they must be nearby each other. If you move the jail be sure to scratch out the old circle.\n\n**Power: Arrest**\nIf you see someone commit a crime you can arrest them by doing the following:\nAnnounce they are under arrest\nAnnounce their crime they committed.\nShow them this power\nBring them to the jail\nThey must stand in jail for 5 minutes\n\nHere are all the things that are crimes:\nAttacking someone (outside of a duel)\nWanting or having The Goods (specific item)\nConspiring against nobility\nCheating in a Duel\nHiding information related to The Prophecy\nInsulting someone's Art\n\n(Try your best not to use this power in ways that are unfun)\n\n**Power: Deputize**\nYou can have one deputy. Show them the arrest power. For as long as they are your deputy they may use the arrest power. Both you and your deputy can let people out of jail for any reason."
+  },
+  {
+    "name": "Herbalist",
+    "subtitle": "You want to make potions",
+    "body": "You enjoy whimsical, slightly nonsensical abilities\n\nStarting Equipment: 2 coins\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\nYou may tear items off your sheet and give them to people.\nPotions can be used on another character if the players agree to it.\n\n**Item: Potion of Polymorph - One use only**\nYou turn into an animal! The choice of animal is up to you. You must act like the animal for 5 minutes. If anyone doubts your animalness show them this card\n\n**Item: Potion of Invisibility - One use only**\nYou turn invisible. This works best if you tell people what you're doing beforehand, and also find a prop to help you indicate what is happening"
+  },
+  {
+    "name": "Herbalist",
+    "subtitle": "You want to make potions",
+    "body": "You enjoy whimsical, slightly nonsensical abilities\n\nStarting Equipment: 2 coins\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\nYou may tear items off your sheet and give them to people.\nPotions can be used on another character if the players agree to it.\n\n**Item: Potion of Polymorph - One use only**\nYou turn into an animal! The choice of animal is up to you. You must act like the animal for 5 minutes. If anyone doubts your animalness show them this card\n\n**Item: Potion of Sneeze - One use only**\nYou must immediately sneeze very loudly.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy"
+  },
+  {
+    "name": "Scholar",
+    "copies": 3,
+    "subtitle": "You like having your head in a dusty old book",
+    "body": "Starting Equipment: 2 coins\n\nYou can tear these items off your sheet in order to trade them to other players.\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy\n\n**Item: Healing Potion**\nIf you are injured you use this item up while saying 'glug glug glug' to be no longer injured"
+  },
+  {
+    "name": "Scholar",
+    "subtitle": "You like having your head in a dusty old book",
+    "body": "Starting Equipment: 2 coins\n\nYou can tear these items off your sheet in order to trade them to other players.\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy"
+  },
+  {
+    "name": "Peasant",
+    "copies": 5,
+    "subtitle": "You want to work for pay",
+    "body": "Starting Equipment: 1 coin\n\n**Power: Peasant Work**\nSpend a full 10 minutes miming/pretending to do some form of labor. When you are done you may take 2 silver from the cup.\n\nYou can use this power at most once each hour.\n(farming, begging, busking, smithing are all valid. You can choose the kind of work as long as someone could feasibly make money doing it and it is obvious you are hard at work for the full 10 minutes)\n\n**Power: Peasant Revolution!**\nIf you think the mayor is doing a bad job, you may lead a peasant revolution. Spend at least 30 minutes rallying people and telling them why you need a new mayor, then confront the mayor and show them this power.\nThe mayor then has 10 minutes to rally a coalition larger than yours. If they cannot, you or a consenting player of your choice becomes the mayor."
+  },
+  {
+    "name": "Bard",
+    "subtitle": "You want to write songs",
+    "body": "Starting Equipment: 2 coins\n\n**Power: Sing a Grand Song**\nInvent a song about a person or deed or situation you witnessed. Perform it for the person.\n\n**Item: Ring of Terrible Luck**\nThis ring is bad news. You do not want it. You can only give it to someone else if they say the words \"I accept this ring\"\nWhen someone takes the ring, give them both the ring and this card.\n(Tear it from your character sheet if you need to)"
+  },
+  {
+    "name": "Notary",
+    "subtitle": "You want to have a stamp more than anything",
+    "body": "Starting Equipment: 2 coins\n\n**Item: Stamp**\nWhen you stamp a document, it becomes 'official.' Harder to contest in a court of law and all around fancier looking.\n\n**Item: Signed Paper**\nThe paper you start with has a perfect forged signature of the Lord Veyron Malchore, Head of the Guild of Fancy Goods"
+  },
+  {
+    "name": "Highwayman",
+    "subtitle": "You want to play as a villain",
+    "body": "You want to do combat with other players\nYou are comfortable being arrested\n\n**Secret:** You and the mayor are working together. It would be bad for both of you if this got out.\nWhen you pick up this character, immediately introduce yourself to the mayor.\nYou may only use your Rob power on someone the mayor has hired you to rob.\nThe mayor will pay you for each robbery.\n\n**Power: Rob**\nWhen you want to rob someone tell them you are robbing them and show them this power.\n\nYou are being robbed! But I am a polite robber. If you really don't want to be robbed, you may say \"I would like to decline this robbing\" and I will leave you alone\n\nIf we're around a crowd, you may call for help. People who respond may help chase me away. If we're away from the main space, you may not call for help.\n\nOtherwise, you must duel me. The loser becomes Wounded.\n\n**Power: Secret Identity**\nIf someone accuses you of robbing people, you may show them this power.\nYou've mistaken me for someone else! It's obvious now that you've had a second look at me that I can't possibly be a robber. You must act suitably confused and say \"Huh? Where'd they go?\" or \"Sorry I got the wrong guy\" or something similar.\nYou may not use this power on someone who defeated you while you were trying to rob them."
+  },
+  {
+    "name": "Town Crier",
+    "subtitle": "You like being loud",
+    "body": "You don't mind being told what to do\n\nStarting Equipment: 2 coins\n\n**Power: Cry**\nIn order to Cry, you must loudly announce something. You must continue to announce it until you are reasonably certain everyone has heard it.\n\n**Power: Just Part of the Job**\nWhen someone asks you to Cry something and you do it, you may take one silver from the vessel.\n\nEach time you use this power, you can't use it again for the next hour."
+  }
+]

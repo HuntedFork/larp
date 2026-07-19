@@ -3,5 +3,65 @@
     "name": "Silverwash",
     "ingredients": [""],
     "effect": "If someone has compelled you to drink this draught in any way, you immediately cough/wretch it out, unable to drink it. If you drink it freely, then you are under the effects of silverwash for 1 hour. While in this state, you are slightly more suggestable than usual (no more than alcohol makes you)"
+  },
+  {
+    "name": "Potion of Sound Mind",
+    "ingredients": [],
+    "effect": "When you use this item you suddenly feel less guilty about your past deeds. You are unsure whether the effect will wear off."
+  },
+  {
+    "name": "Potion of Fish Oil",
+    "ingredients": [],
+    "effect": "When you use this item flip a coin. On heads, you recover from being Injured. On tails, you slip and fall."
+  },
+  {
+    "name": "Potion of False Charisma",
+    "ingredients": [],
+    "effect": "When you use this item you become pitiable. For the next five minutes, you may show this card to people you're talking with. They feel immense pity for you."
+  },
+  {
+    "name": "Potion of Nettleflower",
+    "ingredients": [],
+    "effect": "When you use this item, you become instilled with a great sense of joy, pride, and confidence for a few minutes. You also become fairly itchy."
+  },
+  {
+    "name": "Potion of Borrowed Dreams",
+    "ingredients": [],
+    "effect": "When you use this item, you recall that you were formerly a cooper of some renown. For the next few minutes, you have extremely strong opinions on the construction of casks and barrels."
+  },
+  {
+    "name": "Potion of Borrowed Dreams",
+    "ingredients": [],
+    "effect": "When you use this item, you recall that you were formerly a chef of some renown. For the next few minutes, you have extremely strong opinions on what foods should and should not be paired with a fine red wine."
+  },
+  {
+    "name": "Potion of Mermaid Blood",
+    "ingredients": [],
+    "effect": "When you drink this potion, you recover from being Injured."
+  },
+  {
+    "name": "Potion of Witchhunter's Pepper",
+    "ingredients": [],
+    "effect": "When you drink this potion, if you have ever done an immoral deed, you must immediately sneeze."
+  },
+  {
+    "name": "Potion of Emotional Release",
+    "ingredients": [],
+    "effect": "When you drink this potion, you are able to process one difficult emotion. Side effects include tears of joy and/or sadness."
+  },
+  {
+    "name": "Potion of Emotional Repression",
+    "ingredients": [],
+    "effect": "When you drink this potion, you become unaffected by a difficult emotion."
+  },
+  {
+    "name": "Potion of Morality",
+    "ingredients": [],
+    "effect": "When you drink this potion, you feel the urge to do something dastardly."
+  },
+  {
+    "name": "Potion of Morality",
+    "ingredients": [],
+    "effect": "When you drink this potion, you feel the urge to do something nice."
   }
 ]

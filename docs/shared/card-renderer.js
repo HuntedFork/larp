@@ -4,7 +4,7 @@
  * Fetches data.json from the same directory as the calling page,
  * then renders card elements into #card-container.
  *
- * Usage: each page calls initCards({ type: 'potions' | 'mishaps' })
+ * Usage: each page calls initCards({ type: 'potions' | 'mishaps' | 'characters' })
  */
 
 async function initCards({ type }) {
@@ -44,6 +44,7 @@ function buildCard(type, item) {
   switch (type) {
     case 'potions': return buildPotionCard(item);
     case 'mishaps': return buildMishapCard(item);
+    case 'characters': return buildCharacterCard(item);
     default:
       console.warn(`card-renderer: unknown type "${type}"`);
       return document.createElement('div');
@@ -88,6 +89,42 @@ function buildPotionCard({ name = 'Unnamed', ingredients = [], effect = '' }) {
   effectEl.className = 'card-value';
   effectEl.textContent = effect;
   card.appendChild(effectEl);
+
+  return card;
+}
+
+/**
+ * Builds a character card element.
+ * Expected fields: name (string), subtitle (string, optional), body (string with **bold** support)
+ */
+function buildCharacterCard({ name = 'Unnamed', subtitle = '', body = '' }) {
+  const card = document.createElement('div');
+  card.className = 'card character';
+
+  const nameEl = document.createElement('div');
+  nameEl.className = 'card-name';
+  nameEl.textContent = name;
+  card.appendChild(nameEl);
+
+  if (subtitle) {
+    const subEl = document.createElement('div');
+    subEl.className = 'card-subtitle';
+    subEl.textContent = subtitle;
+    card.appendChild(subEl);
+  }
+
+  if (body) {
+    const bodyEl = document.createElement('div');
+    bodyEl.className = 'card-body';
+    // Convert **text** to <strong>text</strong>, preserve whitespace via CSS
+    bodyEl.innerHTML = body
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n/g, '<br>');
+    card.appendChild(bodyEl);
+  }
 
   return card;
 }

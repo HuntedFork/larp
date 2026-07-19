@@ -55,6 +55,14 @@ body {
   gap: 0;
 }
 
+/* --- Characters: 2 columns × 2 rows = 4 per page (quarter-page cards) --- */
+.card-grid.characters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: calc((10in - 0.3in) / 2);  /* half of printable height minus gap */
+  gap: 0.3in;
+}
+
 /* ============================================================
    Card base styles
    ============================================================ */
@@ -132,4 +140,41 @@ body {
 .card.mishap .card-value {
   font-size: 0.78rem;
   min-height: 0.6in;
+}
+
+/* ============================================================
+   Character-specific styles
+   ============================================================ */
+
+.card.character {
+  border: 1px solid #c8b89a;
+  height: 100%;
+  padding: 0.2in 0.25in;
+  overflow: hidden;
+}
+
+.card.character .card-name {
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1.5px solid #8a7a6a;
+  padding-bottom: 0.06in;
+  margin: 0 0 0.04in 0;
+}
+
+.card.character .card-subtitle {
+  font-size: 0.7rem;
+  font-style: italic;
+  text-align: center;
+  color: #5a4a3a;
+  margin: 0 0 0.1in 0;
+}
+
+.card.character .card-body {
+  font-size: 0.55rem;
+  line-height: 1.4;
+  color: #2a1a0a;
+}
+
+.card.character .card-body strong {
+  font-weight: bold;
 }
