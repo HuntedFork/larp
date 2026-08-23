@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Nameless",
+    "effect": "You can't say your own name."
+  },
+  {
+    "name": "Oathbreaker",
+    "effect": "You are compelled to break any promise you make or have made."
+  },
+  {
+    "name": "Sunbane",
+    "effect": "You cannot go into direct sunlight. If you do, you become Injured immediately."
+  },
+  {
+    "name": "Peacebound",
+    "effect": "You cannot wield a weapon or cause harm."
+  },
+  {
+    "name": "Dispossessed",
+    "effect": "You must immediately give away all your possessions, and you cannot own any."
+  },
+  {
+    "name": "Homewrecked",
+    "effect": "Your domicile immediately burns down."
+  },
+  {
+    "name": "Wellspring of Feeling",
+    "effect": "Pick an emotion. You are prone to random bursts of that emotion, especially at inappropriate times."
+  },
+  {
+    "name": "Wellspring of Feeling",
+    "effect": "Pick an emotion. You are prone to random bursts of that emotion, especially at inappropriate times."
+  },
+  {
+    "name": "Grave News",
+    "effect": "You immediately receive a letter that someone close to you has died."
+  },
+  {
+    "name": "Haunted",
+    "effect": "You are scared of ghosts."
+  },
+  {
+    "name": "Tuneless",
+    "effect": "You have no rhythm, and can only dance or sing very poorly."
+  },
+  {
+    "name": "Ill-Fated",
+    "effect": "You are unlucky, and automatically lose games of chance and skill."
+  },
+  {
+    "name": "Truthbound",
+    "effect": "You cannot lie. If you do, you become Injured immediately."
+  },
+  {
+    "name": "Botched Brew",
+    "effect": "Any time you brew a potion, it results in a mishap."
+  },
+  {
+    "name": "Unflattering Epithet",
+    "effect": "Your name permanently gains an unflattering epithet (like Greg \"Smelly\" Gregore). You must use it when introducing yourself and request others use it too."
+  },
+  {
+    "name": "Illiterate",
+    "effect": "You lose the ability to read."
+  }
+]

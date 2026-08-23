@@ -1,0 +1,169 @@
+/* ============================================================
+   Print stylesheet for Mystery Clue 1 (fold-in-half prop)
+
+   PRINTING: Print DOUBLE-SIDED on ONE letter sheet.
+     - Front side of paper = the COVER page ("DO NOT OPEN").
+     - Back  side of paper = the INSIDE lore page.
+   FOLDING: Fold the sheet in half across the SHORT edge (a
+     horizontal crease at the vertical midline), COVER facing out.
+     The result is a half-letter (8.5 x 5.5) folded card:
+       - front  = DO NOT OPEN (upright)
+       - inside = the lore document (upright when opened)
+     Staple the open edge.
+
+   The COVER content sits in the TOP half of page 1 and is rotated
+   180deg so it reads upright once folded. The LORE fills the whole
+   of page 2 (it flows across the fold crease and reads continuously
+   when the card is opened flat) so nothing gets clipped.
+
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --page-w: 8.5in;
+  --page-h: 11in;
+  --half-h: 5.5in;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+@page {
+  size: letter portrait;
+  margin: 0;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body { background: #e8e4de; padding: 1rem; }
+  .screen-back { max-width: var(--page-w); margin: 0 auto 1rem auto; line-height: 1.5; }
+  .page {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 auto 1rem auto;
+  }
+  .page-tag {
+    display: block;
+    max-width: var(--page-w);
+    margin: 0 auto 0.25rem auto;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6a5a4a;
+  }
+}
+@media print {
+  .screen-back, .page-tag { display: none; }
+}
+
+/* A full letter page */
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: #fff;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* The active half (top) where content lives */
+.half {
+  width: 100%;
+  height: var(--half-h);
+  padding: 0.6in;
+  overflow: hidden;
+}
+/* Crease guide between the two halves */
+.crease {
+  height: 0;
+  border-top: 1px dashed #bbb;
+}
+/* The unused (back-after-fold) half — left blank */
+.half.blank { height: var(--half-h); }
+
+/* ============================================================
+   COVER half — rotated 180deg, centered
+   ============================================================ */
+.cover {
+  transform: rotate(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cover .clue-label {
+  font-size: 13pt;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #6a5a4a;
+  margin-bottom: 0.5in;
+}
+.cover .do-not-open {
+  font-size: 40pt;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: #2a1a0a;
+  border: 3px solid #2a1a0a;
+  padding: 0.25in 0.5in;
+}
+
+/* ============================================================
+   INSIDE lore — uses the FULL page (text may run across the
+   fold crease; it reads continuously when the card is opened
+   flat). Sized to fit a whole letter page without clipping.
+   ============================================================ */
+.page-inside {
+  width: 100%;
+  height: var(--page-h);
+  padding: 0.85in 0.9in;
+  overflow: hidden;
+  position: relative;
+}
+/* Fold crease guide drawn across the middle of the inside page */
+.page-inside .crease-mid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px dashed #ddd;
+}
+.inside { font-size: 10.5pt; line-height: 1.4; }
+
+.inside .frontispiece {
+  font-style: italic;
+  font-size: 9pt;
+  color: #4a3a2a;
+  margin: 0 0 0.08in 0;
+}
+.inside h2 {
+  font-size: 11pt;
+  margin: 0.06in 0 0.05in 0;
+  color: #2a1a0a;
+}
+.inside p { margin: 0 0 0.07in 0; }
+.inside strong { font-weight: bold; }
+.inside em { font-style: italic; }
+.inside hr {
+  border: none;
+  border-top: 1px solid #c8b89a;
+  margin: 0.08in 0;
+}
+.inside .margin {
+  border-left: 3px solid #c8b89a;
+  margin: 0.06in 0 0.06in 0.15in;
+  padding-left: 0.12in;
+  color: #5a4a3a;
+  font-style: italic;
+  font-size: 8.5pt;
+}

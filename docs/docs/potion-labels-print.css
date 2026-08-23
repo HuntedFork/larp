@@ -1,0 +1,211 @@
+/* ============================================================
+   Print stylesheet for Potion Labels
+   - Key sheet (letter portrait) prints first.
+   - Fold-over labels: each label is a full card that folds in
+     half on its LONG edge, producing two stacked landscape panels.
+   - Opened flat and read in landscape:
+       top panel    = ingredient shorthand
+       bottom panel = instructions
+   - Folded size is slightly smaller than a standard business card
+     (3.5in x 2in), so each panel is ~3.3in x 1.85in.
+   ============================================================ */
+
+:root {
+  /* Folded panel dimensions — slightly smaller than a business card */
+  --panel-w: 3.3in;
+  --panel-h: 1.85in;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+@page {
+  size: letter portrait;
+  margin: 0.5in;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body {
+    background: #e8e4de;
+    padding: 1rem;
+  }
+  .screen-back { max-width: 8in; margin: 0 auto 1rem auto; }
+}
+
+@media print {
+  .screen-back { display: none; }
+}
+
+/* ============================================================
+   KEY SHEET
+   ============================================================ */
+.key-sheet {
+  max-width: 7.5in;
+  margin: 0 auto;
+  padding: 0.25in;
+  page-break-after: always;
+  break-after: page;
+}
+
+@media screen {
+  .key-sheet {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+}
+
+.key-sheet h1 {
+  font-size: 20pt;
+  margin: 0 0 0.1in 0;
+  padding-bottom: 0.08in;
+  border-bottom: 1.5px solid #8a7a6a;
+  color: #2a1a0a;
+}
+
+.key-sheet h2 {
+  font-size: 13pt;
+  margin: 0.2in 0 0.06in 0;
+  color: #2a1a0a;
+}
+
+.key-note {
+  font-size: 10.5pt;
+  line-height: 1.5;
+  margin: 0 0 0.12in 0;
+}
+
+.key-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11pt;
+}
+
+.key-table th,
+.key-table td {
+  border: 1px solid #c8b89a;
+  padding: 0.04in 0.1in;
+  text-align: left;
+}
+
+.key-table th {
+  background: #f4f0ea;
+  font-weight: bold;
+}
+
+.key-table td:first-child,
+.key-table th:first-child {
+  width: 0.7in;
+  text-align: center;
+  font-weight: bold;
+}
+
+.shorthand-key {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  font-size: 11pt;
+}
+
+.shorthand-key li {
+  margin-bottom: 0.03in;
+}
+
+/* ============================================================
+   FOLD-OVER LABELS
+   ============================================================ */
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25in;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 0;
+}
+
+/* A single label = two stacked panels + a fold line between them */
+.label {
+  width: var(--panel-w);
+  border: 1px solid #333;          /* cut border */
+  page-break-inside: avoid;
+  break-inside: avoid;
+  background: #fff;
+}
+
+.panel {
+  width: 100%;
+  height: var(--panel-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.15in;
+}
+
+/* Fold line = the long edge crease between the two panels */
+.fold-line {
+  height: 0;
+  border-top: 1px dashed #999;
+}
+
+/* Top interior panel: ingredient shorthand.
+   Keeps the full panel height so the fold lines up; only the text is small. */
+.panel-top {
+  background: #f7f3ec;
+}
+
+.shorthand {
+  font-family: "Courier New", monospace;
+  font-size: 10pt;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #8a7a6a;
+}
+
+/* Bottom interior panel: instructions */
+.instruction {
+  font-size: 15pt;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.instruction strong {
+  font-weight: bold;
+}
+
+.instruction.empty {
+  font-style: italic;
+  color: #6a5a4a;
+  font-size: 13pt;
+}
+
+/* Mishap instructions — usually longer text, so a touch smaller */
+.instruction.mishap {
+  font-size: 11.5pt;
+  line-height: 1.35;
+  color: #7a1a1a;
+}
+
+.instruction.mishap strong {
+  color: #7a1a1a;
+}
+
+@media screen {
+  .labels {
+    max-width: 8in;
+    margin: 0 auto;
+  }
+  .label {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+}

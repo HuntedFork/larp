@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doc — Mystery</title>
+  <link rel="stylesheet" href="./doc-print.css">
+</head>
+<body>
+  <p style="max-width:8.5in;margin:0 auto 0.5rem;"><a href="./index.html">← Back to Mystery</a></p>
+  <div id="doc-content">
+    <!-- Doc markdown is rendered here -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get('file');
+      const content = document.getElementById('doc-content');
+
+      if (!file) {
+        content.innerHTML = '<p><em>No doc file specified. Use <code>?file=filename</code> in the URL.</em></p>';
+        return;
+      }
+
+      // Allow only simple filenames (no paths) for safety.
+      if (!/^[A-Za-z0-9._-]+$/.test(file)) {
+        content.innerHTML = '<p style="color:red;">Invalid file name.</p>';
+        return;
+      }
+
+      try {
+        const response = await fetch(`./${file}.md`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const markdown = await response.text();
+        content.innerHTML = marked.parse(markdown);
+        // Set page title to the first h1 in the document, if present
+        const h1 = content.querySelector('h1');
+        if (h1) document.title = h1.textContent + ' — Mystery';
+      } catch (err) {
+        content.innerHTML = `<p style="color:red;">Failed to load doc: ${err.message}</p>`;
+      }
+    })();
+  </script>
+</body>
+</html>
