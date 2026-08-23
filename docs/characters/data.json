@@ -27,13 +27,13 @@
   },
   {
     "name": "Merchant",
-    "subtitle": "You like buying and selling things.",
-    "body": "Starting Equipment: 5 silver\n\nIf, at any time you acquire the item 'The Goods,' you can turn it in to the table and take 10 silver from the vessel. But be careful, The Goods are very illegal. If you're found to be looking for them there could be a hefty fine!\n\nYou may tear any of the following items off your character sheet in order to trade them to other players, or use them yourself.\n\n**Item: Clue Fragment**\nA fragment from an old journal. Turn in 3 clue fragments at the npc station to get a clue.\n\n**Item: Healing Potion**\nIf you are injured you may use this item up while saying 'glug glug glug' to be no longer injured\n\n**Item: Cursed Amulet**\nAs long as you have this amulet in your possession, you can't say your own name."
+    "subtitle": "An entrepreneur",
+    "body": "Starting Equipment: Merchant starter pack\n\n**Supplier:** Throughout the day your supplier from Grand Harbor will come with shipments. You must have cash on hand to pay them for additional goods when they arrive.\n\n**Competition:** Another merchant is here. Your store, which you must name, is clearly better than theirs."
   },
   {
     "name": "Merchant",
-    "subtitle": "You like buying and selling things.",
-    "body": "Starting Equipment: 5 silver\n\n**Power: Sell Potion**\nYou may use up a potion (as though it had been used) in order to take 2 silver from the vessel. Keep the potion folded in half as a reminder it has been used.\n\nYou may tear any of the following items off your character sheet in order to trade them to other players, or use them yourself.\n\n**Item: Clue Fragment**\nA fragment from an old journal. Turn in 3 clue fragments at the npc station to get a clue.\n\n**Item: Healing Potion - One Use**\nIf you are injured you may use this while saying 'glug glug glug' to be no longer injured\n\n**Item: Lumber**\nA person trying to found a township can turn in lumber at the end of the game to count as 5 silver toward their goal."
+    "subtitle": "An entrepreneur",
+    "body": "Starting Equipment: Merchant starter pack\n\n**Supplier:** Throughout the day your supplier from Grand Harbor will come with shipments. You must have cash on hand to pay them for additional goods when they arrive.\n\n**Competition:** Another merchant is here. Your store, which you must name, is clearly better than theirs."
   },
   {
     "name": "Constable",
@@ -43,18 +43,7 @@
   {
     "name": "Herbalist",
     "subtitle": "You want to make potions",
-    "body": "You enjoy whimsical, slightly nonsensical abilities\n\nStarting Equipment: 2 coins\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\nYou may tear items off your sheet and give them to people.\nPotions can be used on another character if the players agree to it.\n\n**Item: Potion of Polymorph - One use only**\nYou turn into an animal! The choice of animal is up to you. You must act like the animal for 5 minutes. If anyone doubts your animalness show them this card\n\n**Item: Potion of Invisibility - One use only**\nYou turn invisible. This works best if you tell people what you're doing beforehand, and also find a prop to help you indicate what is happening"
-  },
-  {
-    "name": "Herbalist",
-    "subtitle": "You want to make potions",
     "body": "You enjoy whimsical, slightly nonsensical abilities\n\nStarting Equipment: 2 coins\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\nYou may tear items off your sheet and give them to people.\nPotions can be used on another character if the players agree to it.\n\n**Item: Potion of Polymorph - One use only**\nYou turn into an animal! The choice of animal is up to you. You must act like the animal for 5 minutes. If anyone doubts your animalness show them this card\n\n**Item: Potion of Sneeze - One use only**\nYou must immediately sneeze very loudly.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy"
-  },
-  {
-    "name": "Scholar",
-    "copies": 3,
-    "subtitle": "You like having your head in a dusty old book",
-    "body": "Starting Equipment: 2 coins\n\nYou can tear these items off your sheet in order to trade them to other players.\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy\n\n**Item: Healing Potion**\nIf you are injured you use this item up while saying 'glug glug glug' to be no longer injured"
   },
   {
     "name": "Scholar",
@@ -86,5 +75,20 @@
     "name": "Town Crier",
     "subtitle": "You like being loud",
     "body": "You don't mind being told what to do\n\nStarting Equipment: 2 coins\n\n**Power: Cry**\nIn order to Cry, you must loudly announce something. You must continue to announce it until you are reasonably certain everyone has heard it.\n\n**Power: Just Part of the Job**\nWhen someone asks you to Cry something and you do it, you may take one silver from the vessel.\n\nEach time you use this power, you can't use it again for the next hour."
+  },
+  {
+    "name": "Astrologer",
+    "subtitle": "Looks to the stars and portends the future",
+    "body": "Starting Equipment: 1 coin, tarot deck\n\n**Celestial Event:** You've come to Chicken's Rest because you know there will be a truly incredible celestial event visible from here today.\n\n**Power: Portents**\nTell a fortune for a character. If they later tell you it came true for them, you may take 1 coin from the box.\n\nA character can't have their future told more than once per hour."
+  },
+  {
+    "name": "Postperson",
+    "subtitle": "Neither rain, nor sleet, nor dark of night",
+    "body": "Starting Equipment: 2 coins, pile of post\n\n**Power: Deliver Mail**\nYou may deliver mail to the Storytellers. Each time you do so you must give them 2 coins as postage along with the post. The mail MUST have an address on it, and may optionally have a name. Both can be made up."
+  },
+  {
+    "name": "Illiterate",
+    "subtitle": "You start with a book",
+    "body": "Starting Equipment: 1 coin, The Cursed Tome\n\n**The Book:** One day recently your Family Book started behaving oddly. Glowing purple at night, flapping to random pages.\n\n**Cursed:** Take one of the curses from the book to begin the game.\n\n**Illiterate:** You cannot read."
   }
 ]

@@ -45,6 +45,7 @@ function buildCard(type, item) {
     case 'potions': return buildPotionCard(item);
     case 'mishaps': return buildMishapCard(item);
     case 'characters': return buildCharacterCard(item);
+    case 'curses': return buildCurseCard(item);
     default:
       console.warn(`card-renderer: unknown type "${type}"`);
       return document.createElement('div');
@@ -125,6 +126,27 @@ function buildCharacterCard({ name = 'Unnamed', subtitle = '', body = '' }) {
       .replace(/\n/g, '<br>');
     card.appendChild(bodyEl);
   }
+
+  return card;
+}
+
+/**
+ * Builds a curse card element (small, 9 to a page).
+ * Expected fields: name (string), effect (string)
+ */
+function buildCurseCard({ name = 'Unnamed', effect = '' }) {
+  const card = document.createElement('div');
+  card.className = 'card curse';
+
+  const nameEl = document.createElement('div');
+  nameEl.className = 'card-name';
+  nameEl.textContent = name;
+  card.appendChild(nameEl);
+
+  const effectEl = document.createElement('div');
+  effectEl.className = 'card-value';
+  effectEl.textContent = effect;
+  card.appendChild(effectEl);
 
   return card;
 }
