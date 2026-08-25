@@ -1,0 +1,96 @@
+/* ============================================================
+   Print stylesheet for Ghost Invasion curse cards
+   8 cards per page (2 columns x 4 rows).
+   Each curse type prints on its own page.
+   ============================================================ */
+
+@page {
+  size: letter portrait;
+  margin: 0.5in;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body {
+    background: #e8e4de;
+    padding: 1rem;
+  }
+
+  .card-page {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    padding: 0.5in;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+}
+
+/* ============================================================
+   Page = one grid of 8 cards (2 x 4). Break after each page.
+   ============================================================ */
+
+.card-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: calc((10in - 0.6in) / 4);  /* quarter of printable height minus gaps */
+  gap: 0.2in;
+  break-after: page;
+  page-break-after: always;
+}
+
+.card-page:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+/* ============================================================
+   Card styling (purple curse theme, matching shared print.css)
+   ============================================================ */
+
+.card.curse {
+  border: 1px solid #6a4a8a;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.15in 0.18in;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.curse .card-name {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #3a1a5a;
+  border-bottom: 1px solid #6a4a8a;
+  padding-bottom: 0.05in;
+  margin: 0 0 0.03in 0;
+}
+
+.card.curse .card-source {
+  font-size: 0.65rem;
+  font-style: italic;
+  text-align: center;
+  color: #7a6a8a;
+  margin: 0 0 0.08in 0;
+}
+
+.card.curse .card-value {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #2a1a0a;
+  margin: 0;
+}

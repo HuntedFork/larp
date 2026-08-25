@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost Invasion — Curse Cards</title>
+  <link rel="stylesheet" href="./ghost-curse-cards-print.css">
+</head>
+<body>
+  <div id="card-container">
+    <!-- Cards are injected here -->
+  </div>
+
+  <script>
+    // Each curse: printed 8 to a page, 8 of each curse.
+    const CURSES = [
+      {
+        name: "You've Forgotten Something",
+        source: "The Counter",
+        effect: "You are suddenly, gnawingly certain you have forgotten something — or misplaced something important — but you cannot remember what. Lasts 15 minutes, or until the Counter is gone.",
+        count: 8
+      },
+      {
+        name: "Spreading Madness",
+        source: "The Madman",
+        effect: "You believe whatever insane thing the Madman just said — completely and sincerely — for the next ~30 seconds.",
+        count: 8
+      }
+    ];
+
+    (function render() {
+      const container = document.getElementById('card-container');
+
+      CURSES.forEach(function (curse) {
+        const page = document.createElement('div');
+        page.className = 'card-page';
+
+        for (let i = 0; i < curse.count; i++) {
+          const card = document.createElement('div');
+          card.className = 'card curse';
+
+          const nameEl = document.createElement('div');
+          nameEl.className = 'card-name';
+          nameEl.textContent = curse.name;
+          card.appendChild(nameEl);
+
+          const srcEl = document.createElement('div');
+          srcEl.className = 'card-source';
+          srcEl.textContent = curse.source;
+          card.appendChild(srcEl);
+
+          const effectEl = document.createElement('div');
+          effectEl.className = 'card-value';
+          effectEl.textContent = curse.effect;
+          card.appendChild(effectEl);
+
+          page.appendChild(card);
+        }
+
+        container.appendChild(page);
+      });
+    })();
+  </script>
+</body>
+</html>
