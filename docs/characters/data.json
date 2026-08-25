@@ -79,16 +79,22 @@
   {
     "name": "Astrologer",
     "subtitle": "Looks to the stars and portends the future",
-    "body": "Starting Equipment: 1 coin, tarot deck\n\n**Celestial Event:** You've come to Chicken's Rest because you know there will be a truly incredible celestial event visible from here today.\n\n**Power: Portents**\nTell a fortune for a character. If they later tell you it came true for them, you may take 1 coin from the box.\n\nA character can't have their future told more than once per hour."
+    "body": "Starting Equipment: 1 coin, tarot deck\n\n**Celestial Event:** You've come to Chicken's Rest because you know there will be a truly incredible celestial event visible from here today.\n\n**The Reading of the Skies:** Your charts whisper a cryptic hint — the great event will come a little before dusk. When the light begins to fail and the sun dips low, keep your eyes on the heavens.\n\n**Power: Portents**\nTell a fortune for a character. If they later tell you it came true for them, you may take 1 coin from the box.\n\nA character can't have their future told more than once per hour."
   },
   {
     "name": "Postperson",
     "subtitle": "Neither rain, nor sleet, nor dark of night",
-    "body": "Starting Equipment: 2 coins, pile of post\n\n**Power: Deliver Mail**\nYou may deliver mail to the Storytellers. Each time you do so you must give them 2 coins as postage along with the post. The mail MUST have an address on it, and may optionally have a name. Both can be made up."
+    "body": "Starting Equipment: 2 coins, pile of post\n\n**You've got mail!**\nSometimes you will receive mail. The mail in your pile o' post will materialize at the given time. It cannot be opened before then. It is all addressed to a given person, but it is up to you if you deliver it to them.\n\n**Power: Deliver Mail**\nYou may deliver mail to the Storytellers. Each time you do so you must give them 2 coins as postage along with the post. The mail MUST have an address on it, and may optionally have a name. Both can be made up."
   },
   {
     "name": "Illiterate",
     "subtitle": "You start with a book",
     "body": "Starting Equipment: 1 coin, The Cursed Tome\n\n**The Book:** One day recently your Family Book started behaving oddly. Glowing purple at night, flapping to random pages.\n\n**Cursed:** Take one of the curses from the book to begin the game.\n\n**Illiterate:** You cannot read."
+  },
+  {
+    "name": "Pirate",
+    "subtitle": "You want to get drunk",
+    "body": "Starting Equipment: 2 dogwheat\n\n**Proprietor:** You are the owner of the Pirate Bar in Chicken's Rest.\n\n**Power: Brew Ale**\nAt any time, you can exchange 1 dogwheat or 1 ghost pepper for 1 Pirate's Brew from slot 12 at the potion station.\n\n(Pirate's Brew: Makes you forget your troubles. You become intoxicated for ~10 minutes. You also forget to be bothered by one thing that was bothering you.)"
   }
 ]
+

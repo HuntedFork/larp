@@ -83,5 +83,11 @@
     "name": "Salve of Wound Closure",
     "ingredients": ["Amaranth", "Rock Salt"],
     "effect": "When you use this salve on someone who is Injured, they recover from being Injured."
+  },
+  {
+    "name": "Pirate's Brew",
+    "ingredients": ["Dogwheat", "Ghost Pepper"],
+    "effect": "Makes you forget your troubles. You become intoxicated for ~10 minutes. You also forget to be bothered by one thing that was bothering you."
   }
 ]
+
