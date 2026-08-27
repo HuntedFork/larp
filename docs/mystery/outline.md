@@ -77,7 +77,7 @@ element).
   cleanest pairing in the puzzle — we lean into it with an explicit clue (C1).
 - **Uggglub (Fish) → Vile Glomphidious (Water).** The Drowned Choir of the river; Vile
   Glomphidious is the watery, fishy fluid reagent (Fish Oil, Moon Oil). Perfect fit.
-- **Korrenvast (Iron) → Rock Salt (Earth).** The Unbending, drawn from ore in the deep
+- **Korrenvast (Iron) → Rock Salt (Earth).** The Turning Coin, drawn from ore in the deep
   ground; Rock Salt is the literal mineral of the earth, mined from stone. Iron and Earth
   are kin — both dug from the mountain's bones.
 - **Ursgrom (Bear) → Bone Dust (Body).** The Slumbering Mountain of muscle and hide; the

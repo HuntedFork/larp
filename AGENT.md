@@ -56,7 +56,13 @@ optional magic ring). Keep this list current whenever you introduce a new prop.
 
 ## Style conventions
 
-- Markdown docs open with a single `# Title` (used as the page `<title>`).
+- **Printables are judged by the printed page, nothing else.** If something looks wrong on
+  paper — a stray heading, a screen-only note, a rule that pushes content down — cut it,
+  even if it reads fine in the browser. Never add on-screen furniture to a document that
+  gets handed to a player.
+- Markdown docs *may* open with a single `# Title` (the loaders use the first `<h1>` for
+  the page `<title>` when one exists, and fall back to a generic title when it doesn't).
+  It is **not required** — omit it on anything meant to be printed and handed out.
 - Match the tone of existing files: earthy, slightly archaic, evocative.
 - Printable card sheets: keep the purple curse theme / existing card CSS patterns.
 - Reference the shipments' contents in `docs/docs/files/setup.md`.

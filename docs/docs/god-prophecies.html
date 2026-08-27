@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>God Prophecies — Counsel on the Magic</title>
+  <link rel="stylesheet" href="./god-prophecies-print.css">
+</head>
+<body>
+  <p class="screen-back">
+    <a href="./index.html">← Back to Docs</a><br>
+    <strong>Print DOUBLE-SIDED</strong> (flip on the <strong>SHORT edge</strong>).
+    <strong>4 prophecies to a page</strong> — odd pages are the covers, even pages are the
+    matching prophecies. <strong>Cut along the dashed cross</strong> into four
+    4.25&nbsp;×&nbsp;5.5 quarters, then <strong>fold each quarter in half across the short
+    edge</strong> (horizontal crease at its middle) with the cover facing out. You get a
+    4.25&nbsp;×&nbsp;2.75 folded card: <strong>DO NOT OPEN — &lt;God&gt; Prophecy</strong> on
+    the front, the god's counsel hidden inside. There are <strong>6 prophecies</strong>, one
+    per god.
+  </p>
+
+  <div id="sheet-container">
+    <!-- Sheets are injected here -->
+  </div>
+
+  <script>
+    // One prophecy per god: a line announcing the voice, then the god's own words.
+    const PROPHECIES = [
+      {
+        god: "Nytheris",
+        voice: "A voice like a whisper off still water calls out to you.",
+        counsel: "Allow me to harness the power of this storm and I can cause the whole " +
+          "WORLD to descend into madness!"
+      },
+      {
+        god: "Ursgrom",
+        voice: "A voice like a mountain shifting in its sleep calls out to you.",
+        counsel: "The world is good as it is, and our ancestors had wisdom for sealing it. " +
+          "Give me the power and I will take all the magic and seal it once more into a " +
+          "great tree. Any answer other than sealing it away is hubris, and could lead to " +
+          "disaster."
+      },
+      {
+        god: "Uggglub",
+        voice: "A voice like a drowned choir calls out to you.",
+        counsel: "Give me the power and I will sweep the spirits away. After, I will invest " +
+          "it into nature. New and wild plants will grow, fantastic beasts. The world will " +
+          "be much changed, and it will be better for it."
+      },
+      {
+        god: "Korrenvast",
+        voice: "A voice like a hammer on an anvil calls out to you.",
+        counsel: "Give me the power and I will take all magic and distribute it in the " +
+          "land. I will create a new, magical metal, and there will be a new age of " +
+          "innovation and industry. Those who are bold and fortunate will prosper, those " +
+          "who cling to the old ways will fall."
+      },
+      {
+        god: "Cindralok",
+        voice: "A voice like a fire catching calls out to you.",
+        counsel: "I will teach you to take the power for yourselves. Each of you will " +
+          "become a great and powerful Sorcerer, capable of enacting your will on the " +
+          "land. Everyone's fates will rise and fall with your whims."
+      },
+      {
+        god: "Thistlebarrow",
+        voice: "A voice like thunder calls out to you.",
+        counsel: "There is no reason to do anything. The world seems dark now, but it is " +
+          "only because you have not yet discovered the Old Ways. You can learn to put the " +
+          "spirits to rest, and to tame the beasts. Once you have, you will be greater and " +
+          "stronger. Put the power down, and trust the cycle."
+      }
+    ];
+
+    (function render() {
+      const container = document.getElementById('sheet-container');
+      const PER_SHEET = 4;
+
+      // A short-edge duplex flip turns the sheet about its horizontal axis, so a
+      // front quarter lands on the back quarter directly above/below it:
+      //   TL(0) <-> BL(2)   and   TR(1) <-> BR(3)
+      // Laying the inside page out in this order backs every prophecy onto its
+      // own cover. The map is its own inverse.
+      const BACK_OF = [2, 3, 0, 1];
+
+      function el(tag, className, html) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (html !== undefined) node.innerHTML = html;
+        return node;
+      }
+
+      function makeSheet(tagText) {
+        container.appendChild(el('span', 'page-tag', tagText));
+        const page = el('div', 'page');
+        page.appendChild(el('div', 'cut-guides'));
+        container.appendChild(page);
+        return page;
+      }
+
+      function coverQuarter(p) {
+        const q = el('div', 'quarter');
+        const half = el('div', 'cover-half');
+        half.appendChild(el('div', 'do-not-open', 'DO NOT OPEN'));
+        half.appendChild(el('div', 'god-name', p.god));
+        half.appendChild(el('div', 'prophecy-word', 'Prophecy'));
+        q.appendChild(half);
+        q.appendChild(el('div', 'q-crease'));
+        q.appendChild(el('div', 'blank-half'));
+        return q;
+      }
+
+      function insideQuarter(p) {
+        const q = el('div', 'quarter inside-card');
+        q.appendChild(el('div', 'crease-mid'));
+        q.appendChild(el('p', 'voice', p.voice));
+        q.appendChild(el('h2', null, p.god));
+        q.appendChild(el('p', 'counsel', p.counsel));
+        return q;
+      }
+
+      for (let start = 0; start < PROPHECIES.length; start += PER_SHEET) {
+        const group = PROPHECIES.slice(start, start + PER_SHEET);
+        const sheetNo = (start / PER_SHEET) + 1;
+        const names = group.map(function (p) { return p.god; }).join(', ');
+
+        // --- Front side: the four covers, in reading order ---
+        const front = makeSheet(
+          'Sheet ' + sheetNo + ' — Covers (prints on the front side): ' + names);
+        group.forEach(function (p) { front.appendChild(coverQuarter(p)); });
+        for (let i = group.length; i < PER_SHEET; i++) {
+          front.appendChild(el('div', 'quarter'));
+        }
+
+        // --- Back side: prophecies, reordered so each lines up through the paper ---
+        const back = makeSheet(
+          'Sheet ' + sheetNo + ' — Prophecies (prints on the back side)');
+        for (let slot = 0; slot < PER_SHEET; slot++) {
+          const p = group[BACK_OF[slot]];
+          back.appendChild(p ? insideQuarter(p) : el('div', 'quarter'));
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

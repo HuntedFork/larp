@@ -92,6 +92,11 @@
     "body": "Starting Equipment: 1 coin, The Cursed Tome\n\n**The Book:** One day recently your Family Book started behaving oddly. Glowing purple at night, flapping to random pages.\n\n**Cursed:** Take one of the curses from the book to begin the game.\n\n**Illiterate:** You cannot read."
   },
   {
+    "name": "Librarian",
+    "subtitle": "Honored Keeper of the lore",
+    "body": "You are the librarian of Chicken's Rest, Honored Keeper of the lore.\n\nThis role might not be for you if you don't like dusty old documents.\n\nStarting Equipment: Librarian's Stamp\n\n**Truth Seeker:** You are a Truth Seeker, whatever that means to you. Others who call themselves by that same name are your allies.\n\n**Power: Late Fee**\nYou can check out assets from the library to someone. If they bring it back late, show them this power and they must give you a coin."
+  },
+  {
     "name": "Pirate",
     "subtitle": "You want to get drunk",
     "body": "Starting Equipment: 2 dogwheat\n\n**Proprietor:** You are the owner of the Pirate Bar in Chicken's Rest.\n\n**Power: Brew Ale**\nAt any time, you can exchange 1 dogwheat or 1 ghost pepper for 1 Pirate's Brew from slot 12 at the potion station.\n\n(Pirate's Brew: Makes you forget your troubles. You become intoxicated for ~10 minutes. You also forget to be bothered by one thing that was bothering you.)"

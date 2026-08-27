@@ -40,7 +40,9 @@ Each god has an artifact box the binding player opens. Include the correct god p
 
 - **Ursgrom (Bear God):** the artifact item + the Bear God page.
 - **Uggglub (River God):** the artifact item + **1 Vile Glomphidious** + the River God page.
-- **Korrenvast (Iron God):** the artifact item + **5 coins** + the Iron God page.
+- **Korrenvast (Iron God):** the artifact item — a **great iron coin** (his god icon, used for all his wagers) — + **5 coins** + the Iron God page.
+
+**Note:** Korrenvast's power, *Fortune's Favor*, draws **10 coins from the coin box every hour**, which he may only stake on coin-flip bets. Keep the coin box well stocked.
 
 ## Pile o' Post
 

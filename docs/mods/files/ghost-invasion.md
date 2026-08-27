@@ -1,6 +1,6 @@
 # Ghost Invasion
 
-**Characters:** 4 ghosts (scalable — run as few or as many as you have players for)
+**Characters:** 5 ghosts (scalable — run as few or as many as you have players for)
 
 The veil has thinned over Chicken's Rest, and the restless dead have wandered into town. Each ghost carries an unfinished piece of their old life. They are not here to slaughter — they are here because they are *stuck*, and until the living help them, they cannot move on.
 
@@ -12,7 +12,7 @@ Each ghost is played independently. There is no single villain and no single end
 - **Each ghost then reads only their own section below.** Do not read the other ghosts' sections — part of the fun is the living discovering what makes each one tick.
 - **Ghosts wear a white headband** to mark them as spirits.
 - **Ghosts drift into town separately**, or emerge from the woods at different times, so the living deal with them one at a time rather than all at once. A little overlap is fine and chaotic and good.
-- **Two of the ghosts hand out curse cards** (the Counter and the Madman). Print the [Ghost Curse Cards](../mods/ghost-curse-cards.html) sheet before the mod and give each of those ghosts their stack of 8 cards.
+- **Three of the ghosts hand out curse cards** (the Counter, the Madman, and the Judge). Print the [Ghost Curse Cards](../mods/ghost-curse-cards.html) sheet before the mod and give each of those ghosts their stack of 8 cards.
 - **When a ghost is laid to rest**, they announce quietly that they fade into mist, remove the headband, and return to play as their own character. No questions asked.
 
 ---
@@ -122,7 +122,7 @@ Somewhere along the road to ruin, your shattered mind brushed against the **Deep
 - **Ashroot** — the Rootbinder, whom *iron unsettles*.
 - **Ursgrom** — the Slumbering Mountain, the bear-god of the long sleep.
 - **Uggglub** — the Drowned Choir, the fish-god of the deep river.
-- **Korrenvast** — the Unbending, the iron-god of the cold forge.
+- **Korrenvast** — the Turning Coin, the iron-god of the lucky seam.
 
 You don't understand what these names mean. You just *know* them, and they claw their way out of your mouth. Sprinkle them among your insane ramblings so that a clever, patient listener can pick the real names out of the noise.
 
@@ -145,15 +145,51 @@ Hand these out with glee. You have 8 of them.
 
 ---
 
+## The Judge
+
+*A magistrate in life, and a hanging one. He passed sentence on hundreds and never once doubted himself. He is still holding court, and every living soul in Chicken's Rest is on his docket.*
+
+### Backstory (deliver as rulings, not confessions)
+
+You sat the bench for thirty years. You never lost a night's sleep over a verdict, because you were **right** — you were always right, that was the whole of your gift. It was only at the very end, with the black cap in your hand and nobody left in the gallery, that the thought arrived: *what if one of them wasn't guilty?* You died before you could finish the thought. You have been trying to finish it ever since, by convicting everyone else instead.
+
+### How You Behave
+
+- You **accuse people, loudly and formally, of sins.** Not crimes — **sins.** Pick one at random and pronounce it as settled fact. *"You. Yes, you. Pride. It is written all over you. How do you plead?"*
+- **Sins to draw from:** Pride. Greed. Envy. Wrath. Gluttony. Sloth. Vanity. Deceit. Cowardice. Ingratitude. Blasphemy. Miserliness. Idleness. (**Not lust** — leave that one off the docket entirely.)
+- **You do not investigate and you do not need evidence.** You are the Judge. The accusation *is* the verdict. If they protest, that is contempt, and contempt is itself a sin — note it and add it to the charges.
+- You are **pompous, sonorous, and utterly certain.** You bang an imaginary gavel. You call the street to order. You address people as "the accused" and refer to yourself as "this court."
+- **You never accuse anyone of the same sin twice in a row** — keep working down the list, so the town hears a spread of charges rather than one note.
+- **If the Justice is in play, they are your favourite target.** A living magistrate holding court in *your* town is an outrage. Accuse them of pride first, and often.
+
+### Your Curse — *The Verdict*
+
+When you pass sentence on someone, **hand them a curse card.**
+
+> **The Verdict:** You are crushed by guilt over something you have genuinely done. You cannot deny the charge, argue with the Judge, or stand up to him — you can only agree that he is right. Lasts **15 minutes, or until the Judge is gone.**
+
+- **The guilt is real and it is theirs.** They pick the thing they feel guilty about — in-character or invented on the spot. You don't need to know what it is. Your job is to look grimly satisfied when they crumble.
+- Hand these out freely to anyone who catches your eye, argues with you, or simply walks past the bench. You have 8 of them.
+- **A cursed person can still act** — they can walk, talk, trade, and go about their day. They simply cannot look you in the eye and tell you that you are wrong.
+
+### How to Lay You to Rest
+
+- **Someone must stand up to you — *through* the curse.** Not a person you haven't sentenced yet, and not someone waiting out the 15 minutes: someone **currently under The Verdict** who refuses the charge to your face anyway. Being told off by the innocent means nothing to you. Being told off by the guilty, who know exactly what they've done and stand up regardless, is the thing that finishes the thought you died on.
+- **Pushing through the curse requires an in-game ability** — a power, an item, a potion, a god's favor, anything on a character sheet that gives them standing. Raw willpower is not enough; the curse is stronger than that.
+- **But trust the player.** If someone says an ability of theirs lets them defy you, **it does** — do not audit their character sheet, do not haggle, do not ask to see the card twice. If they've brought something and they're committing to the moment, give it to them.
+- When it lands, do not argue. Go quiet. Sit down. Say something like *"...then this court was wrong. At least once. At last."* Fade with the enormous relief of a man finally allowed to be mistaken.
+
+---
+
 ## Props
 
 - **White headbands** — one per ghost. Available in the grab-bag binder.
-- **Ghost Curse Cards** — print the [Ghost Curse Cards sheet](../mods/ghost-curse-cards.html). Contains 8 **"You've Forgotten Something"** cards (Counter) and 8 **"Spreading Madness"** cards (Madman), 8 to a page. Give each of those ghosts their stack.
+- **Ghost Curse Cards** — print the [Ghost Curse Cards sheet](../mods/ghost-curse-cards.html). Contains 8 **"You've Forgotten Something"** cards (Counter), 8 **"Spreading Madness"** cards (Madman), and 8 **"The Verdict"** cards (Judge), 8 to a page. Give each of those ghosts their stack.
 - **Magic Wedding Ring** *(optional, for the Lover)* — if a 3D-printed ring prop is available, it becomes a magic marriage ring the Lover can be laid to rest with. If you want, the Lover can even carry it and offer it to whoever will marry them, so the living can literally wed the ghost to release it.
 
 ## Special Considerations
 
-- **Scale to your group.** Run one ghost or all four. Stagger their arrivals so the living aren't overwhelmed.
+- **Scale to your group.** Run one ghost or all five. Stagger their arrivals so the living aren't overwhelmed.
 - **Ghosts are not out to win.** You are stuck, and you *want* to be helped. Give the living real openings to solve you. If they're close, lean in; don't stonewall a good-faith solution.
 - **Reward cleverness and drama.** If a player finds a solution that isn't listed but clearly fits the spirit of your haunting, let it work.
 - Every ghost should review the [Ghost Player Instructions](../indymods/indymod.html?file=ghost-instructions) before playing.

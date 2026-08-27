@@ -156,6 +156,29 @@ should be reconciled to the 3-axis model once this clue outline is signed off (o
 
 **Still deferred:** writing the actual lore prose in `clue.md`.
 
+---
 
+## 2026-08-25 — Iron God Rewritten as a God of Fortune
 
+**Change:** Korrenvast is no longer a god of discipline and toil. He is now a **god of
+fortune** who carries a **great iron coin** (his god icon) and flips it to settle
+everything. Epithet changed from *"the Unbending"* to **"the Turning Coin."**
+
+- **New belief:** magic should be **distributed at random** — not to the studied, the
+  pious, or the hard-working, but to whoever the coin lands on. The **iron veins** are his
+  proof: ore is scattered blind through the deep stone and goes to the **bold and
+  fortunate** miner, not the diligent one.
+- **New power — *Fortune's Favor*:** each hour take **10 coins from the box**, usable
+  ONLY for bets with other players; each bet is **something they own vs. his coins**,
+  decided by a **flip of the god icon**. (Replaces *Reward of Labor*.)
+- **Puzzle unaffected:** Korrenvast is still **Earth / Rock Salt**; clue **C8/D6** still
+  reads "the Iron God holds the Earth." `clue6.html` (*The Forge-Warden's Testament*) was
+  re-flavoured to random, luck-struck seams while keeping the bolded load-bearing line
+  intact.
+
+**Files updated:** `docs/docs/files/gods.md` (Korrenvast page + the Bear's and River's
+opinions of him), `docs/docs/files/setup.md`, `docs/docs/files/props-checklist.md` (great
+iron coin added as a prop; coin box stocked for 10/hour), `docs/mods/files/ghost-invasion.md`
+(madman's name list), `docs/mystery/gods.md`, `docs/mystery/outline.md`,
+`docs/mystery/clue6.html`.
 

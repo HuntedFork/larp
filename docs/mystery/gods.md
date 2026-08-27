@@ -50,9 +50,11 @@ her — a rich hook), war, ore, the unyielding. Good candidate for **Lightning/S
 (forge-spark) or **Fire** (the smithy). Deliberately NOT given Earth so as not to
 collide with the Bear.
 
-1. **Korrenvast — "the Unbending"** *(recommended)*
-   - Hard consonants, "vast" for a colossal forge-god; "Unbending" = iron's nature and a
-     nice contrast to root/branch that bend to Thistlebarrow.
+1. **Korrenvast — "the Turning Coin"** *(recommended, LOCKED epithet)*
+   - Hard consonants, "vast" for a colossal ore-god; "the Turning Coin" = the iron veins
+     scattered blind through the deep stone, and the great coin he flips to settle every
+     wager. (Earlier draft epithet "the Unbending" was dropped when the Iron God was
+     rewritten as a god of *fortune* rather than of discipline.)
 2. **Hearthscar — "Lord of the Cold Forge"**
    - Evokes the smithy gone cold; good if the Iron God is fallen/abandoned.
 3. **Grivmund — "the Blood-in-Ore"**
@@ -68,7 +70,7 @@ collide with the Bear.
 |------|------|---------|
 | Bear God | **Ursgrom** | the Slumbering Mountain |
 | Fish God | **Uggglub** | the Drowned Choir |
-| Iron God | **Korrenvast** | the Unbending |
+| Iron God | **Korrenvast** | the Turning Coin |
 
 
 > These three are used as placeholders throughout `outline.md`, `solution.md`, and

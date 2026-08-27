@@ -1,0 +1,204 @@
+/* ============================================================
+   Print stylesheet for the God Prophecies (4-up fold-in-half props)
+
+   PRINTING: Print DOUBLE-SIDED, flip on the SHORT edge.
+     - Front side of a sheet = four COVER quarters
+       ("DO NOT OPEN — <God> Prophecy").
+     - Back  side of a sheet = the four matching PROPHECY quarters.
+   CUTTING: Cut each sheet along the cross guides into four
+     4.25 x 5.5 quarters.
+   FOLDING: Fold each quarter in half across the SHORT edge (a
+     horizontal crease at its midline), COVER facing out. The result
+     is a 4.25 x 2.75 folded card:
+       - front  = DO NOT OPEN (upright)
+       - inside = the god's counsel (upright when opened flat)
+
+   DUPLEX NOTE: with a short-edge flip the sheet turns about its
+   horizontal axis, so a front quarter lands on the back quarter
+   directly above/below it (TL<->BL, TR<->BR). The inside page is
+   therefore laid out in the order 3,4,1,2 so every prophecy backs
+   its own cover. The renderer does this automatically.
+
+   As with the other fold props, the COVER sits in the TOP half of
+   its quarter and is rotated 180deg so it reads upright once folded.
+   The PROPHECY fills its whole quarter (text may cross the crease;
+   it reads continuously when the card is opened flat).
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --page-w: 8.5in;
+  --page-h: 11in;
+  --q-w: 4.25in;
+  --q-h: 5.5in;
+  --q-half: 2.75in;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+@page {
+  size: letter portrait;
+  margin: 0;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body { background: #e8e4de; padding: 1rem; }
+  .screen-back { max-width: var(--page-w); margin: 0 auto 1rem auto; line-height: 1.5; }
+  .page {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 auto 1rem auto;
+  }
+  .page-tag {
+    display: block;
+    max-width: var(--page-w);
+    margin: 0 auto 0.25rem auto;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6a5a4a;
+  }
+}
+@media print {
+  .screen-back, .page-tag { display: none; }
+}
+
+/* ============================================================
+   A full letter sheet = a 2 x 2 grid of quarters
+   ============================================================ */
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--q-w) var(--q-w);
+  grid-template-rows: var(--q-h) var(--q-h);
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* Cut guides — a cross drawn over the sheet, no box-model impact */
+.cut-guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.cut-guides::before,
+.cut-guides::after {
+  content: "";
+  position: absolute;
+  border-color: #ccc;
+  border-style: dashed;
+}
+.cut-guides::before {   /* vertical cut */
+  top: 0; bottom: 0; left: 50%;
+  border-left-width: 1px;
+  border-top-width: 0; border-right-width: 0; border-bottom-width: 0;
+}
+.cut-guides::after {    /* horizontal cut */
+  left: 0; right: 0; top: 50%;
+  border-top-width: 1px;
+  border-left-width: 0; border-right-width: 0; border-bottom-width: 0;
+}
+
+/* One quarter of a sheet = one card */
+.quarter {
+  width: var(--q-w);
+  height: var(--q-h);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================================================
+   COVER quarter — content in the TOP half, rotated 180deg
+   ============================================================ */
+.cover-half {
+  width: 100%;
+  height: var(--q-half);
+  padding: 0.3in;
+  overflow: hidden;
+  transform: rotate(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Crease guide between the two halves of a quarter */
+.q-crease {
+  height: 0;
+  border-top: 1px dashed #bbb;
+}
+.blank-half { height: var(--q-half); }
+
+.cover-half .do-not-open {
+  font-size: 15pt;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #2a1a0a;
+  border: 2px solid #2a1a0a;
+  padding: 0.1in 0.22in;
+}
+.cover-half .god-name {
+  margin-top: 0.22in;
+  font-size: 17pt;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  color: #2a1a0a;
+  line-height: 1.1;
+}
+.cover-half .prophecy-word {
+  margin-top: 0.04in;
+  font-size: 9.5pt;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6a5a4a;
+}
+
+/* ============================================================
+   PROPHECY quarter — fills the whole quarter
+   ============================================================ */
+.inside-card {
+  padding: 0.42in 0.4in;
+}
+/* Fold crease guide across the middle of the quarter */
+.inside-card .crease-mid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px dashed #ddd;
+}
+.inside-card .voice {
+  font-style: italic;
+  font-size: 9.5pt;
+  line-height: 1.35;
+  color: #4a3a2a;
+  margin: 0 0 0.12in 0;
+}
+.inside-card h2 {
+  font-size: 12pt;
+  margin: 0 0 0.1in 0;
+  padding-bottom: 0.07in;
+  border-bottom: 1px solid #c8b89a;
+  color: #2a1a0a;
+}
+.inside-card .counsel {
+  font-size: 11pt;
+  line-height: 1.5;
+  margin: 0;
+}
