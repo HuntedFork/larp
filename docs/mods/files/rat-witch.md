@@ -9,10 +9,12 @@ The Rat Witch comes to town to sell her goods. She brings an assortment of goods
 ## What She Brings
 
 - Assorted herbs
-- A clue
+- **Clue 1** — *A Bestiary of the Heart*
 - The Ritual of Banishment
 - A Pirate's Brew (this is mostly what she's here for)
 - Any and all potions
+
+She also runs a game of **cups** (see the *Cups* mod), playing for her treasures — a Key, the Iron God's artifact box, **Clue 7** (*The Goat-Kin's Record of the Madness*), a potion or two, and a page of curses.
 
 ## Leaving
 

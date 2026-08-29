@@ -2,7 +2,7 @@
   {
     "name": "Justice",
     "subtitle": "A fair and impartial Judge, of contest and character",
-    "body": "You are a justice! You have trained for years in Law, the Code Duello, and Honorable Conduct.\n\nStarting Resources: 4 coins"
+    "body": "You are a justice! You have trained for years in Law, the Code Duello, and Honorable Conduct.\n\nStarting Resources: 2 coins\n\n**Power: Declare Sentence**\nShow to someone who The Constable has arrested.\nThey choose one of the following penalties:\n- Going to prison (for 5 minutes)\n- Apologizing really hard\n- Paying a fine (1 coin)\nOnce they have done their penalty, their crime is forgiven. You can't use this power on someone more than once per hour.\n\n**Power: Listen to the Mayor**\nThe mayor can decree new laws."
   },
   {
     "name": "Healer",
@@ -13,17 +13,12 @@
     "name": "Scion",
     "copies": 2,
     "subtitle": "You're rich.",
-    "body": "You're rich, and you want everyone to know it.\n\nStarting Equipment: 12 coins\n\n**Power: Have a Tip**\nWhen someone does something you told them to:\nPay them 1 extra coin (On top of what you agreed to)\n\nNo person can be the target of this power more than once per hour.\n\n**Power: My Loyal Second**\nIf someone agrees to be your second, show them this power.\n\nAny time someone challenges you to a duel or contest, you may have your second take your place. If you do, you receive all rewards and consequences of your contest still, but it is your second who participates.\n(You may only have one second at a time)"
+    "body": "You're rich, and you want everyone to know it.\n\nStarting Equipment: 8 coins\n\n**Power: Have a Tip**\nWhen someone does something you told them to:\nPay them 1 extra coin (On top of what you agreed to)\n\nNo person can be the target of this power more than once per hour.\n\n**Power: My Loyal Second**\nIf someone agrees to be your second, show them this power.\n\nAny time someone challenges you to a duel or contest, you may have your second take your place. If you do, you receive all rewards and consequences of your contest still, but it is your second who participates.\n(You may only have one second at a time)"
   },
   {
     "name": "Scoundrel",
     "subtitle": "You don't mind being a villain",
-    "body": "Starting Equipment: 0 coins\n\n**Item: Spinefish Venom**\nYou coat your blades in venom. Show this to a player before you fight them.\n\n\"My blades are coated in venom! After I strike you roleplay feeling weak and woozy for 15 minutes or until a healer attends to you. You don't know you've been poisoned, only that you don't feel very good\"\n\nLimited supply: You can only use this power once\nBuy some more: You can use it one more time each time you put one of your coins back in the money vessel.\nSell it: You can tear this power off your sheet to sell it."
-  },
-  {
-    "name": "Smuggler",
-    "subtitle": "You don't mind being a villain",
-    "body": "**Power: Pickpocket**\nYou pickpocket someone. Show this to another player and guess one of their pockets. If they have any silver in that pocket, they must give you one of them.\n\nCan never be used on the same player twice\n\n**Item: The Goods**\nYou have the goods. You got them from your supplier. Someone in this town wants them and you'll make a pretty penny if you can figure out who.\n\nBut you know someone else is on to your scent. If they find out you got The Goods they'll bring the law down on you.\n\nYou can tear this off your character sheet to give it to someone."
+    "body": "Starting Equipment: 0 coins, Ritual of summoning Silver\n\n**Item: Spinefish Venom**\nShow this to a player who has eaten or drunk something.\n\n\"Whatever you just ate or drank was poisoned! Roleplay feeling weak and woozy for 15 minutes or until a healer attends to you. You don't know you've been poisoned, only that you don't feel very good\"\n\nLimited supply: You can only use this power once\nBuy some more: You can use it one more time each time you put one of your coins back in the money vessel.\nSell it: You can tear this power off your sheet to sell it."
   },
   {
     "name": "Merchant",
@@ -38,17 +33,27 @@
   {
     "name": "Constable",
     "subtitle": "You want to enforce the laws",
-    "body": "You're good at arresting people (but not actually arresting them)\n\nStarting Equipment: 2 coins\n\n**Power: Make Jail**\nUse your foot and draw a circle in the dirt. That's the jail.\nYou can have multiple jail cells, but they must be nearby each other. If you move the jail be sure to scratch out the old circle.\n\n**Power: Arrest**\nIf you see someone commit a crime you can arrest them by doing the following:\nAnnounce they are under arrest\nAnnounce their crime they committed.\nShow them this power\nBring them to the jail\nThey must stand in jail for 5 minutes\n\nHere are all the things that are crimes:\nAttacking someone (outside of a duel)\nWanting or having The Goods (specific item)\nConspiring against nobility\nCheating in a Duel\nHiding information related to The Prophecy\nInsulting someone's Art\n\n(Try your best not to use this power in ways that are unfun)\n\n**Power: Deputize**\nYou can have one deputy. Show them the arrest power. For as long as they are your deputy they may use the arrest power. Both you and your deputy can let people out of jail for any reason."
+    "body": "You're good at arresting people (but not actually arresting them)\n\nStarting Equipment: 2 coins\n\n**Power: Make Jail**\nUse your foot and draw a circle in the dirt. That's the jail.\nYou can have multiple jail cells, but they must be nearby each other. If you move the jail be sure to scratch out the old circle.\n\n**Power: Arrest**\nYou can arrest someone who is doing something suspicious. If you do, show them this power then bring them to the Constable.\n\n(Try your best not to use this power in ways that are unfun)\n\n**Power: Deputize**\nYou can have one deputy. Show them the arrest power. For as long as they are your deputy they may use the arrest power. Both you and your deputy can let people out of jail for any reason.\n\n**Power: Listen to the Mayor**\nThe mayor can decree new laws."
+  },
+  {
+    "name": "Alchemist",
+    "subtitle": "You want to make potions",
+    "body": "You enjoy whimsical, slightly nonsensical abilities\n\nStarting Equipment: 1 Dogwheat\n\n**Power: Steady Hands**\nWhen you brew a potion, if the potion results in a mishap, the ingredients are not destroyed.\n\nYou may tear items off your sheet and give them to people.\nPotions can be used on another character if the players agree to it.\n\n**Item: Potion of Polymorph - One use only**\nYou turn into an animal! The choice of animal is up to you. You must act like the animal for 5 minutes. If anyone doubts your animalness show them this card\n\n**Item: Potion of Sneeze - One use only**\nYou must immediately sneeze very loudly."
+  },
+  {
+    "name": "Mad Alchemist",
+    "subtitle": "You're going to find the Philosopher's Stone",
+    "body": "Starting Equipment: 1 Ghost Pepper, 1 Rock Salt\n\n**The Philosopher's Stone**\nYou're positive alchemy can be used to create the Philosopher's Stone. Now you just need to find the right recipe.\n\n**Madness**\nYou're obsessed with the Philosopher's Stone, and become less hinged as your search grows closer to its goal.\n\n**Resolution**\nIf you find it is impossible to create the stone, you realize the real Philosopher's Stone was the friends you made along the way."
   },
   {
     "name": "Herbalist",
-    "subtitle": "You want to make potions",
-    "body": "You enjoy whimsical, slightly nonsensical abilities\n\nStarting Equipment: 2 coins\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\nYou may tear items off your sheet and give them to people.\nPotions can be used on another character if the players agree to it.\n\n**Item: Potion of Polymorph - One use only**\nYou turn into an animal! The choice of animal is up to you. You must act like the animal for 5 minutes. If anyone doubts your animalness show them this card\n\n**Item: Potion of Sneeze - One use only**\nYou must immediately sneeze very loudly.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy"
+    "subtitle": "You know the ways of herbs",
+    "body": "Starting Equipment: 1 dogwheat, 1 Ghost Pepper, 1 Rock Salt\n\n**Power: Herbalism**\nGet a copy of the herbalism ritual from a story teller."
   },
   {
     "name": "Scholar",
     "subtitle": "You like having your head in a dusty old book",
-    "body": "Starting Equipment: 2 coins\n\nYou can tear these items off your sheet in order to trade them to other players.\n\n**Power: Brew Potion**\nTo use this power you must get an assistant. Show them this power and then roleplay brewing a potion for 10 seconds.\n\nWhen the potion is finished flip a coin.\nOn a heads the potion is a success. A one use item that you possess can be used again as if it hadn't been used.\nOn a tails the potion explodes and you and your partner become injured. (roleplay being injured, move no faster than a walk, can't do combat)\nEach time you use this power you can't use it again for an hour.\n\n**Item: Clue Fragment**\nTurn 3 of these into the npc station for a clue to the prophecy"
+    "body": "Starting Equipment: 2 coins, a mysterious message\n\n**A Mysterious Message**\nYou start with a mysterious message. A document has come into your hands and you cannot make sense of it alone. Read it. It speaks of the old powers of the deep woods — and it is not the only one of its kind in town."
   },
   {
     "name": "Peasant",
@@ -59,7 +64,7 @@
   {
     "name": "Bard",
     "subtitle": "You want to write songs",
-    "body": "Starting Equipment: 2 coins\n\n**Power: Sing a Grand Song**\nInvent a song about a person or deed or situation you witnessed. Perform it for the person.\n\n**Item: Ring of Terrible Luck**\nThis ring is bad news. You do not want it. You can only give it to someone else if they say the words \"I accept this ring\"\nWhen someone takes the ring, give them both the ring and this card.\n(Tear it from your character sheet if you need to)"
+    "body": "Starting Equipment: 2 coins\n\n**Power: Sing a Grand Song**\nInvent a song about a person or deed or situation you witnessed. Perform it for the person.\n\n**Power: Well Known**\nShow this power to anyone. Tell them something they've already heard about you.\n\nYou can only use this power on each person once.\n\n**Item: Ring of Terrible Luck**\nThis ring is bad news. You do not want it. You can only give it to someone else if they say the words \"I accept this ring\"\nWhen someone takes the ring, give them both the ring and this card.\n(Tear it from your character sheet if you need to)"
   },
   {
     "name": "Notary",
@@ -69,7 +74,7 @@
   {
     "name": "Highwayman",
     "subtitle": "You want to play as a villain",
-    "body": "You want to do combat with other players\nYou are comfortable being arrested\n\n**Secret:** You and the mayor are working together. It would be bad for both of you if this got out.\nWhen you pick up this character, immediately introduce yourself to the mayor.\nYou may only use your Rob power on someone the mayor has hired you to rob.\nThe mayor will pay you for each robbery.\n\n**Power: Rob**\nWhen you want to rob someone tell them you are robbing them and show them this power.\n\nYou are being robbed! But I am a polite robber. If you really don't want to be robbed, you may say \"I would like to decline this robbing\" and I will leave you alone\n\nIf we're around a crowd, you may call for help. People who respond may help chase me away. If we're away from the main space, you may not call for help.\n\nOtherwise, you must duel me. The loser becomes Wounded.\n\n**Power: Secret Identity**\nIf someone accuses you of robbing people, you may show them this power.\nYou've mistaken me for someone else! It's obvious now that you've had a second look at me that I can't possibly be a robber. You must act suitably confused and say \"Huh? Where'd they go?\" or \"Sorry I got the wrong guy\" or something similar.\nYou may not use this power on someone who defeated you while you were trying to rob them."
+    "body": "You want to do combat with other players. You are comfortable being arrested.\n\n**Secret:** You and the mayor are working together. It would be bad for both of you if this got out. Immediately introduce yourself to the mayor. You may only Rob someone the mayor has hired you to rob. The mayor will pay you for each robbery.\n\n**Power: Rob**\nTell someone you are robbing them and show them this power.\n\nYou are being robbed! But I am a polite robber. You may say \"I would like to decline this robbing\" and I will leave you alone.\n\nAround a crowd, you may call for help. People who respond may chase me away. Away from the main space, you may not call for help.\n\nOtherwise, you must duel me. The loser becomes Wounded.\n\n**Power: Secret Identity**\nIf someone accuses you of robbing people, show them this power.\nYou've mistaken me for someone else! Now that you've had a second look, I can't possibly be a robber. You must act confused and say \"Huh? Where'd they go?\" or \"Sorry, I got the wrong guy\" or something similar.\nYou may not use this on someone who defeated you while you were robbing them."
   },
   {
     "name": "Town Crier",
@@ -94,12 +99,37 @@
   {
     "name": "Librarian",
     "subtitle": "Honored Keeper of the lore",
-    "body": "You are the librarian of Chicken's Rest, Honored Keeper of the lore.\n\nThis role might not be for you if you don't like dusty old documents.\n\nStarting Equipment: Librarian's Stamp\n\n**Truth Seeker:** You are a Truth Seeker, whatever that means to you. Others who call themselves by that same name are your allies.\n\n**Power: Late Fee**\nYou can check out assets from the library to someone. If they bring it back late, show them this power and they must give you a coin."
+    "body": "You are the librarian of Chicken's Rest, Honored Keeper of the lore.\n\nThis role might not be for you if you don't like dusty old documents.\n\n**Truth Seeker:** You are a Truth Seeker, whatever that means to you. Others who call themselves by that same name are your allies.\n\n**Power: Late Fee**\nYou can check out assets from the library to someone. If they bring it back late, show them this power and they must give you a coin."
+  },
+  {
+    "name": "Pirate Captain",
+    "subtitle": "You yearn to get back to the seas",
+    "body": "Starting Equipment: 2 coins\n\n**Yearn for the Seas**\nYou long to get back to the high seas where you can once again begin your privateering. Also do other piratey things.\n\n**Assemble the Crew**\nBut to get there, you're going to need a crew. Find one person to be each of the following:\n- First Mate\n- Cabin Sweep\n- Cannoneer\n- Rigger\n- Navigator\n\n**The Legend is Here**\nThe other pirate here used to be a legend. If you can get them back on the sea you'd have the most fearsome crew on the ocean."
   },
   {
     "name": "Pirate",
     "subtitle": "You want to get drunk",
     "body": "Starting Equipment: 2 dogwheat\n\n**Proprietor:** You are the owner of the Pirate Bar in Chicken's Rest.\n\n**Power: Brew Ale**\nAt any time, you can exchange 1 dogwheat or 1 ghost pepper for 1 Pirate's Brew from slot 12 at the potion station.\n\n(Pirate's Brew: Makes you forget your troubles. You become intoxicated for ~10 minutes. You also forget to be bothered by one thing that was bothering you.)"
+  },
+  {
+    "name": "Traveler",
+    "subtitle": "Just passing through",
+    "body": "Starting Equipment: 2 coins, 1 random herb"
+  },
+  {
+    "name": "Traveler",
+    "subtitle": "Just passing through",
+    "body": "Starting Equipment: 2 coins, 1 random herb"
+  },
+  {
+    "name": "Traveler",
+    "subtitle": "Just passing through",
+    "body": "Starting Equipment: 2 coins, 1 random herb"
+  },
+  {
+    "name": "Traveler",
+    "subtitle": "Just passing through",
+    "body": "Starting Equipment: 2 coins, 1 random herb"
   }
 ]
 

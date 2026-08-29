@@ -1,0 +1,117 @@
+/* ============================================================
+   Print stylesheet for "All Mods + IndyMods" (single print job)
+
+   Loaded AFTER mod-print.css, which supplies all the document
+   typography. Everything is rendered inside one #mod-content
+   wrapper so those rules apply unchanged; this file only adds
+   the per-document page breaks and the screen-only chrome.
+
+   PRINTING: single-sided. Every mod starts on a fresh sheet.
+   ============================================================ */
+
+/* Each mod/indymod starts on its own page. */
+.mod-doc {
+  page-break-after: always;
+  break-after: page;
+}
+
+.mod-doc:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* Never orphan a heading at the foot of a page. */
+.mod-doc h1,
+.mod-doc h2,
+.mod-doc h3 {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.mod-doc li,
+.mod-doc blockquote {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* ============================================================
+   Screen preview — each document shown as its own sheet, with
+   a caption naming it. None of this reaches the printer.
+   ============================================================ */
+@media screen {
+  /* Undo the single-sheet framing from mod-print.css: the wrapper
+     is now just a container for many sheets. */
+  #mod-content {
+    background: transparent;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    min-height: 0;
+  }
+
+  .mod-doc {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    padding: 1in;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+
+  .screen-back,
+  .load-status {
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    line-height: 1.5;
+  }
+
+  .load-status {
+    padding: 0.5rem 0.75rem;
+    font-family: sans-serif;
+    font-size: 13px;
+    border-left: 4px solid #6a5a4a;
+    background: #f4efe6;
+  }
+  .load-status.ok { border-left-color: #2f6f3f; }
+  .load-status.bad { border-left-color: #9b2c2c; color: #9b2c2c; }
+
+  .section-head {
+    max-width: 8.5in;
+    margin: 1.5rem auto 0.5rem auto;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2a1a0a;
+    border-bottom: 2px solid #8a7a6a;
+    padding-bottom: 0.25rem;
+  }
+
+  .sheet-head {
+    max-width: 8.5in;
+    margin: 0 auto 0.25rem auto;
+    padding: 0.35rem 0.6rem;
+    background: #2a1a0a;
+    color: #f4efe6;
+    font-family: sans-serif;
+    font-size: 13px;
+    border-radius: 3px;
+  }
+  .sheet-head .sheet-no {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #c8b89a;
+    display: block;
+  }
+}
+
+@media print {
+  .screen-back,
+  .load-status,
+  .section-head,
+  .sheet-head {
+    display: none !important;
+  }
+}

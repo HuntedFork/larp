@@ -1,4 +1,4 @@
-# Terrible Healing (WIP)
+# Terrible Healing
 
 **Characters:**
 

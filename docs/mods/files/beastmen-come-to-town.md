@@ -8,7 +8,7 @@ A couple of beastmen come to town. They are trying to **acquire alcohol from the
 
 ## The Clue
 
-- They have **one clue, torn in half**, and each beastman carries a half.
+- They have **Clue 8** (*The Stag's Own Verse*) — **torn in half**, and each beastman carries a half.
 - They will **trade the clue halves for alcohol**, or for similarly interesting items.
 - If the players can stand it, they are **happy to recite what's on the clue**.
 - They **do not treat the clue as a treasured possession.** They only reveal it after a while of performing antics.

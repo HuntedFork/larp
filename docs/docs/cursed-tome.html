@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cursed Tome (printable)</title>
+  <link rel="stylesheet" href="./cursed-tome-print.css">
+</head>
+<body>
+  <p class="screen-back">
+    <a href="./index.html">← Back to Docs</a><br>
+    <strong>Print DOUBLE-SIDED</strong> (flip on the <strong>SHORT edge</strong>) on
+    <strong>2 sheets</strong>. Each sheet is one leaf: the front side is the cover, the back
+    side is the writing. Then <strong>fold each sheet in half across the short edge</strong>
+    (horizontal crease at the middle) with the cover facing out — you get an
+    8.5&nbsp;×&nbsp;5.5 folded leaf, cover on the front, writing hidden inside.
+    <strong>Leaf 1</strong> (<em>Only opened by someone who can read</em>) goes in the front
+    of the book prop; <strong>leaf 2</strong> (<em>Open when all curses have been taken</em>)
+    goes at the back. Tuck a page of <a href="../curses/index.html">Curse Cards</a> (cut into
+    9) between them.<br>
+    Cindralok's letter is dated <strong>exactly 5 years before today</strong>. Printing ahead
+    of time? Add <code>?gameday=YYYY-MM-DD</code> to this page's URL to date it 5 years before
+    the day you actually play.
+  </p>
+
+  <!-- ============================================================
+       LEAF 1, PAGE 1 — THE TOME, cover (front side of the paper)
+       ============================================================ -->
+  <span class="page-tag">Leaf 1 — Tome cover (prints on the front side)</span>
+  <div class="page">
+    <div class="half cover">
+      <div class="tome-label">The Family Book</div>
+      <div class="stamp">Only opened by<br>someone who can read</div>
+      <div class="glyph">&#10022; &#10022; &#10022;</div>
+    </div>
+    <div class="crease"></div>
+    <div class="half blank"></div>
+  </div>
+
+  <!-- ============================================================
+       LEAF 1, PAGE 2 — THE TOME, inside (back side of the paper)
+       ============================================================ -->
+  <span class="page-tag">Leaf 1 — Cindralok's message (prints on the back side)</span>
+  <div class="page">
+    <div class="page-inside">
+      <div class="crease-mid"></div>
+      <div class="inside">
+
+        <p class="reading">
+          This tome is clearly cursed. You've never seen a more cursed object in your life. The
+          curses are radiating off it in an almost purple glow. Reading any further will curse
+          you. <strong>Take a curse from the book before continuing</strong> — or slam the book
+          shut to avoid taking one.
+        </p>
+
+        <hr>
+
+        <h2>Cindralok's Vengeance</h2>
+
+        <p class="script">
+          I am Cindralok. Ancient Fire Serpent of the deep woods. Five years ago, this book was
+          stolen from me. I have erased the knowledge contained within and replaced it with my
+          ancient hatred.
+        </p>
+        <p class="script">
+          Five years from now, if it has not been returned to me, my vengeance shall take form,
+          and the book, its owner, their family, and every building they have ever set foot in
+          will catch fire, and they will burn.
+        </p>
+        <p class="dated">Dated: <span class="date" id="cursed-date">&nbsp;</span></p>
+        <p class="signature">Cindralok</p>
+
+        <hr>
+
+        <p class="reading">
+          As curses are taken from the book, you sense the dread energy emanating from it
+          disperses. You sense you can prevent the terrible destiny by taking
+          <strong>every</strong> curse from the book.
+        </p>
+
+      </div><!-- .inside -->
+    </div><!-- .page-inside -->
+  </div><!-- .page -->
+
+  <!-- ============================================================
+       LEAF 2, PAGE 1 — THE PURIFIED PAGE, cover (front side)
+       ============================================================ -->
+  <span class="page-tag">Leaf 2 — Purified page cover (prints on the front side)</span>
+  <div class="page">
+    <div class="half cover">
+      <div class="tome-label">The Last Leaf</div>
+      <div class="stamp small">Open when all curses have<br>been taken from the book</div>
+      <div class="glyph">&#10022; &#10022; &#10022;</div>
+    </div>
+    <div class="crease"></div>
+    <div class="half blank"></div>
+  </div>
+
+  <!-- ============================================================
+       LEAF 2, PAGE 2 — THE PURIFIED PAGE, inside (back side)
+       ============================================================ -->
+  <span class="page-tag">Leaf 2 — The purified page (prints on the back side)</span>
+  <div class="page">
+    <div class="page-inside">
+      <div class="crease-mid"></div>
+      <div class="inside">
+
+        <p class="reading">
+          The last of the energy finally fades from the book. Its curse is cleared and it is
+          purified. Inside, every page has become blank but for one, which reads:
+        </p>
+
+        <p class="question">&ldquo;What wouldst thou ask?&rdquo;</p>
+
+        <div class="write-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <p class="instruction">
+          Write a single question here and bring it to a Storyteller for a single answer.
+        </p>
+
+      </div><!-- .inside -->
+    </div><!-- .page-inside -->
+  </div><!-- .page -->
+
+  <script>
+    // Cindralok's letter is dated EXACTLY five years before the day the game
+    // runs, so the threatened vengeance lands on today. Defaults to today;
+    // pass ?gameday=YYYY-MM-DD to print ahead for a future game day.
+    (function dateTheCurse() {
+      var params = new URLSearchParams(window.location.search);
+      var raw = params.get('gameday');
+      var day = raw && /^\d{4}-\d{2}-\d{2}$/.test(raw)
+        ? new Date(raw + 'T12:00:00')
+        : new Date();
+      if (isNaN(day.getTime())) day = new Date();
+      day.setFullYear(day.getFullYear() - 5);
+      document.getElementById('cursed-date').textContent =
+        day.toLocaleDateString('en-GB', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        });
+    })();
+  </script>
+</body>
+</html>

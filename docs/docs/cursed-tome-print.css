@@ -1,0 +1,250 @@
+/* ============================================================
+   Print stylesheet for The Cursed Tome (fold-in-half book props)
+
+   TYPE: Kalam for the writing in the book (it is a written
+   artifact, not a printed one), Cinzel for the cover stamps, EB
+   Garamond for the lines that speak to the *player* rather than
+   the character. See shared/fonts.css.
+
+   PRINTING: Print DOUBLE-SIDED, flip on the SHORT edge. Two sheets:
+     - Sheet 1 front = THE TOME cover ("Only opened by someone who
+       can read"); Sheet 1 back = Cindralok's message.
+     - Sheet 2 front = THE PURIFIED PAGE cover ("Open when all
+       curses have been taken from the book"); Sheet 2 back = the
+       blank-page reveal.
+   FOLDING: Fold each sheet in half across the SHORT edge (a
+     horizontal crease at the vertical midline), COVER facing out.
+     The result is a half-letter (8.5 x 5.5) folded leaf that sits
+     inside the book prop:
+       - front  = the cover (upright)
+       - inside = the writing (upright when opened)
+
+   The COVER content sits in the TOP half of its page and is rotated
+   180deg so it reads upright once folded. The INSIDE fills the whole
+   page (text runs across the crease and reads continuously when the
+   leaf is opened flat) so nothing gets clipped.
+
+   COLOUR: the purple of the curse cards (#3a1a5a / #6a4a8a) — the
+   curses "radiate off it in an almost purple glow".
+   ============================================================ */
+
+@import url('../shared/fonts.css');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --page-w: 8.5in;
+  --page-h: 11in;
+  --half-h: 5.5in;
+  --ink: #1a1a1a;
+  --purple: #3a1a5a;
+  --purple-light: #6a4a8a;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-book);
+  color: var(--ink);
+  background: #fff;
+}
+
+@page {
+  size: letter portrait;
+  margin: 0;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body { background: #e8e4de; padding: 1rem; }
+  .screen-back {
+    max-width: var(--page-w);
+    margin: 0 auto 1rem auto;
+    font-family: Georgia, serif;
+    line-height: 1.5;
+  }
+  .page {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 auto 1rem auto;
+  }
+  .page-tag {
+    display: block;
+    max-width: var(--page-w);
+    margin: 0 auto 0.25rem auto;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6a5a4a;
+  }
+}
+@media print {
+  .screen-back, .page-tag { display: none; }
+}
+
+/* A full letter page */
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: #fff;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* The active half (top) where cover content lives */
+.half {
+  width: 100%;
+  height: var(--half-h);
+  padding: 0.6in;
+  overflow: hidden;
+}
+/* Crease guide between the two halves */
+.crease {
+  height: 0;
+  border-top: 1px dashed #bbb;
+}
+/* The unused (back-after-fold) half — left blank */
+.half.blank { height: var(--half-h); }
+
+/* ============================================================
+   COVER half — rotated 180deg, centered
+   ============================================================ */
+.cover {
+  transform: rotate(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cover .tome-label {
+  font-family: var(--font-inscription);
+  font-size: 13pt;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+  margin-bottom: 0.5in;
+}
+.cover .stamp {
+  font-family: var(--font-inscription);
+  font-size: 26pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  color: var(--purple);
+  border: 3px solid var(--purple);
+  padding: 0.25in 0.45in;
+  max-width: 6in;
+}
+.cover .stamp.small { font-size: 21pt; }
+.cover .glyph {
+  margin-top: 0.45in;
+  font-family: var(--font-inscription);
+  font-size: 11pt;
+  letter-spacing: 0.4em;
+  text-indent: 0.4em;
+  color: var(--purple-light);
+}
+
+/* ============================================================
+   INSIDE page — uses the FULL page (text may run across the fold
+   crease; it reads continuously when the leaf is opened flat).
+   ============================================================ */
+.page-inside {
+  width: 100%;
+  height: var(--page-h);
+  padding: 0.85in 0.9in;
+  overflow: hidden;
+  position: relative;
+}
+/* Fold crease guide drawn across the middle of the inside page */
+.page-inside .crease-mid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px dashed #ddd;
+}
+.inside { font-size: 11pt; line-height: 1.45; }
+.inside p { margin: 0 0 0.12in 0; }
+.inside strong { font-weight: 700; }
+.inside em { font-style: italic; }
+
+/* What the reader SEES and feels — spoken to the player, so it is
+   set printed rather than in the book's hand, and boxed off. */
+.inside .reading {
+  font-family: var(--font-printed);
+  font-size: 11.5pt;
+  line-height: 1.4;
+  color: #3a2a4a;
+  border-left: 3px solid var(--purple-light);
+  padding-left: 0.16in;
+  margin: 0 0 0.22in 0;
+}
+.inside .reading:last-child { margin-bottom: 0; }
+
+/* Cindralok's own writing — the hand on the page */
+.inside h2 {
+  font-family: var(--font-inscription);
+  font-size: 16pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--purple);
+  margin: 0.1in 0 0.18in 0;
+}
+.inside .script {
+  font-size: 12.5pt;
+  line-height: 1.55;
+  color: var(--purple);
+}
+.inside .dated {
+  margin-top: 0.24in;
+  font-size: 11.5pt;
+  color: var(--purple);
+}
+.inside .dated .date {
+  border-bottom: 1px solid var(--purple-light);
+  padding: 0 0.12in;
+}
+.inside .signature {
+  margin-top: 0.1in;
+  font-family: var(--font-inscription);
+  font-size: 12pt;
+  letter-spacing: 0.12em;
+  text-align: right;
+  color: var(--purple);
+}
+.inside hr {
+  border: none;
+  border-top: 1px solid var(--purple-light);
+  margin: 0.22in 0;
+}
+
+/* The purified page — the single line left in a blank book */
+.inside .question {
+  font-family: var(--font-inscription);
+  font-size: 20pt;
+  text-align: center;
+  color: var(--purple);
+  margin: 0.35in 0 0.3in 0;
+}
+/* Ruled space for the player to write their one question */
+.inside .write-lines { margin: 0 0 0.2in 0; }
+.inside .write-lines .line {
+  border-bottom: 1px solid var(--purple-light);
+  height: 0.42in;
+}
+.inside .instruction {
+  font-family: var(--font-printed);
+  font-size: 11pt;
+  font-style: italic;
+  color: #3a2a4a;
+  text-align: center;
+  margin: 0;
+}

@@ -14,10 +14,10 @@ earn **clues** and use them to solve the mystery. At the heart of the mystery is
 
 - A clue is a **full sheet of paper, folded in half and stapled shut**.
 - Players can only see the **outside** without opening it.
-- The **outside** carries:
-  - A small placeholder label (e.g. *"Clue 1"*).
-  - A **DO NOT OPEN** gate, ideally a quest/condition (e.g. *"DO NOT OPEN unless you
-    share a personal secret"*), in the style of last year's clues.
+- The **outside** carries only a small placeholder label (e.g. *"Clue 1"*). The
+  **DO NOT OPEN** gates were dropped from every clue (see the change log, 2026-08-27) —
+  the sole exception is **Clue 4**, whose outside reads *"DO NOT OPEN until you have
+  assembled the bones of the saint."*
 - The **inside** contains a **lore document** — a piece of in-world text from the world
   of Chicken's Rest.
 
@@ -153,6 +153,49 @@ All deliverables live in **`docs/mystery/`**, reachable from the root `index.htm
     uniqueness trace + plan mapping 12 clues into 6 lore docs (D1–D6). Linked in the index.
   - **TODO:** `outline.md` and `solution.md` still describe the older welded-axis model and
     must be reconciled to the 3-axis design (or retired in favor of `clue-outline.md`).
+- **2026-08-27** — The Saint's Box revision:
+  - **DO NOT OPEN gates removed from all clues except Clue 4.** Clue outsides are now plain
+    "Clue N" labels (clues 9/10 keep their "PROPERTY OF THE LIBRARY" covers).
+  - **Clue 4 rewritten** from *The Alchemist's Journal* to *The Bones of the Saint*: the
+    cover reads *"DO NOT OPEN until you have assembled the bones of the saint."* Inside, the
+    assembled skeleton rattles upright and **Saint Merewen** tells the story of her life,
+    ending with her dying request that her crypt be dressed with **Amaranth, the Flower of
+    the Spirit** — C5 (Spirit→Amaranth) is now delivered directly, not by elimination.
+  - **New pointer clue (`clue11.html`):** *The Record of the Consecration of the Saint* —
+    renowned for putting spirits at rest, both those in people and those that walked free;
+    buried in Chicken's Rest **beneath the red tablecloth**. No grid clue; it leads players
+    to the saint's box.
+  - **New printable relic cards (`saint-cards.html`):** *Hand of the Saint* and *Foot of
+    the Saint*, a quarter page each — rest the relic on someone, show the card, and they
+    must tell you something that has been bothering them.
+  - **Setup doc gains "The Saint's Box"** start-of-game setup: bones, 2× Bone Dust, Clue 4,
+    the two relic cards, and the red tablecloth on top. (Deliberately NOT on the timeline.)
+- **2026-08-28** — Clue distribution pinned; Clue Fragments retired:
+  - **Clue Fragments removed from the game.** They were unredeemable (only 2 existed in the
+    whole character deck, against a 3-fragment price) and the "NPC station" they referenced
+    was never defined anywhere. Cut from the Alchemist and Scholar sheets and from the Print
+    Checklist.
+  - **The Scholar now starts with "a mysterious message"** — this is **Clue 5**
+    (*A Letter on the River-God*), handed over with their sheet. It puts a real clue in a
+    player's hands at minute one and gives the Scholar something to chase.
+  - **Every clue now has exactly one assigned home** (see the Props Checklist table):
+    1 → Rat Witch, 2 → Merchant Pack A, 3 → Merchant Pack B, 4 → the saint's box,
+    5 → the Scholar, 6 → Second Shipment (3 coins), 7 → Cups, 8 → the beastmen (torn in
+    half), 9 & 10 → Library setup, 11 → Pile o' Post 1. This closes the old §6 open
+    decision ("which doc is easiest to earn"): the **load-bearing L–I clues 2 and 3 sit in
+    the merchant packs**, the only source guaranteed to be in town from the first minute,
+    and the survivable **Clue 8** is the one that gets torn in half and drunk away.
+  - **Setup doc's broken "Library Setup" stub replaced** with a real section placing
+    Clues 9 and 10 in the play area before game start.
+  - **New `all-clues.html` — every clue in one print job.** Printing eleven separate pages
+    was a chore, so this page collects all 11 clues in order: 22 pages = **11 double-sided
+    sheets, one clue per sheet**. It does **not** copy the lore — it fetches `clue1.html` …
+    `clue11.html` and lifts the two `.page` elements out of each, so it can never drift out
+    of sync when a clue is edited. Each clue keeps its own cover, gate, and folding
+    behaviour. On screen every sheet is captioned with its title and where the prop ends up
+    (mirroring the Props Checklist table); those captions are `display:none` in print.
+    *(Last year's clues were already a single combined document —
+    `docs/docs/last-years-clues.html` — so no equivalent was needed there.)*
 
 
 

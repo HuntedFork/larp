@@ -1,0 +1,156 @@
+/* ============================================================
+   Self-hosted period fonts for the printed props.
+
+   These are served from this repo (docs/shared/fonts/*.woff2) rather
+   than from a font CDN, so a prop prints identically on the GM's
+   machine whether or not it has a network connection at print time.
+
+   - EB Garamond — a Renaissance old-style serif (the look of a
+     printed book of the period). Used for clue body text.
+   - Cinzel — Roman inscriptional capitals. Used for cover stamps
+     and labels ("Clue 4", "DO NOT OPEN", "PROPERTY OF THE LIBRARY").
+   - Kalam — a legible ink hand. Used for marginalia, so a note "in a
+     later hand" reads as written in, not typeset. Picked for its
+     large x-height: a prop is no use if the players can't read it.
+
+   Each face is loaded twice: the `latin` subset covers ordinary
+   text, the `latin-ext` subset covers the accented characters.
+   Both are declared with `font-display: swap` so a slow font never
+   blanks the page.
+   ============================================================ */
+
+/* --- EB Garamond (body text) --- */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('./fonts/ebgaramond-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('./fonts/ebgaramond-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('./fonts/ebgaramond-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('./fonts/ebgaramond-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* --- Cinzel (cover stamps and labels) --- */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./fonts/cinzel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./fonts/cinzel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* --- Kalam (the documents themselves, in hand) ---
+   Picked for legibility over a script face: Kalam's x-height is 0.53
+   against a typical script's 0.40, so it stays readable at print size
+   rather than collapsing into a squiggle. Three weights: light for the
+   airy notes, regular for body, bold for the puzzle facts (there is no
+   italic — browsers synthesise a slant for <em>). */
+@font-face {
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./fonts/kalam-light-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/kalam-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/kalam-bold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --- Architects Daughter (a SECOND hand, for marginalia) ---
+   The margin notes are by a different person than the document's author
+   ("a different, shakier hand below"), so they get a visibly different
+   hand rather than the same one at a smaller size. */
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/architectsdaughter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================================================
+   Named roles, so documents ask for a *purpose* rather than a
+   font name. Every one falls back to a font that is on every
+   machine, so nothing breaks if the woff2 files are missing.
+
+   The clues are handwritten artifacts in the fiction — a cook's
+   receipt "in a broad, confident hand", a pilgrim's letter, a
+   leaf "in a hand none of the town can name" — so --font-book
+   is a hand, and the two hands are deliberately different:
+   the document's author vs. the later reader in the margin.
+   --font-printed is kept for the few things that really are
+   printed or carved rather than written.
+   ============================================================ */
+:root {
+  --font-book: 'Kalam', 'Segoe Print', 'Bradley Hand', cursive;
+  --font-inscription: 'Cinzel', 'Copperplate', Georgia, serif;
+  --font-hand: 'Architects Daughter', 'Segoe Print', 'Bradley Hand', cursive;
+  --font-printed: 'EB Garamond', Georgia, 'Times New Roman', serif;
+}

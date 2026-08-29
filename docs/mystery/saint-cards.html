@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystery — Saint Relic Cards</title>
+  <link rel="stylesheet" href="./saint-cards-print.css">
+</head>
+<body>
+  <p class="screen-note">
+    <a href="./index.html">← Back to Mystery</a> —
+    The relic cards of the saint's box. Print <strong>single-sided</strong> on one letter
+    sheet, then cut the page into <strong>quarters</strong> along the card borders: one
+    <strong>Hand of the Saint</strong> and one <strong>Foot of the Saint</strong>, a quarter
+    page each. The bottom two quarters are blank — discard them or keep them as spares.
+    Both cards go in the saint's box (see the <em>Setup</em> doc).
+  </p>
+
+  <div id="card-container">
+    <!-- Cards are injected here -->
+  </div>
+
+  <script>
+    // The saint's relics — one card each, a quarter page each.
+    const RELICS = [
+      {
+        name: "Hand of the Saint",
+        source: "The right hand of Saint Merewen",
+        effect: "If you rest the hand of the saint on someone, show them this card: they must tell you something that has been bothering them, and their soul feels more at ease."
+      },
+      {
+        name: "Foot of the Saint",
+        source: "The right foot of Saint Merewen",
+        effect: "If you rest the foot of the saint on someone, show them this card: they must tell you something that has been bothering them, and their soul feels more at ease."
+      }
+    ];
+
+    (function render() {
+      const container = document.getElementById('card-container');
+
+      const page = document.createElement('div');
+      page.className = 'card-page';
+
+      RELICS.forEach(function (relic) {
+        const card = document.createElement('div');
+        card.className = 'card relic';
+
+        const nameEl = document.createElement('div');
+        nameEl.className = 'card-name';
+        nameEl.textContent = relic.name;
+        card.appendChild(nameEl);
+
+        const srcEl = document.createElement('div');
+        srcEl.className = 'card-source';
+        srcEl.textContent = relic.source;
+        card.appendChild(srcEl);
+
+        const effectEl = document.createElement('div');
+        effectEl.className = 'card-value';
+        effectEl.textContent = relic.effect;
+        card.appendChild(effectEl);
+
+        page.appendChild(card);
+      });
+
+      // Fill the bottom half of the sheet with blank quarters (cut guides).
+      for (let i = 0; i < 2; i++) {
+        const blank = document.createElement('div');
+        blank.className = 'card-blank';
+        page.appendChild(blank);
+      }
+
+      container.appendChild(page);
+    })();
+  </script>
+</body>
+</html>

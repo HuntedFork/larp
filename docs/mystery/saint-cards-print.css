@@ -1,0 +1,124 @@
+/* ============================================================
+   Print stylesheet for the saint's relic cards (Mystery)
+   2 cards (Hand & Foot of the Saint) on one letter sheet,
+   a QUARTER PAGE each (top row of a 2 x 2 quarter grid; the
+   bottom two quarters are blank cut guides).
+   Bone/sepia relic theme, matching the mystery clue pages.
+
+   TYPE: unlike the clues, these are not handwritten artifacts — they
+   are cards you show a player to convey a rule, so they stay in the
+   printed serif (--font-printed) rather than a hand. Cinzel for the
+   relic name keeps them in the same family as the clue covers.
+   ============================================================ */
+
+@import url('../shared/fonts.css');
+
+@page {
+  size: letter portrait;
+  margin: 0.5in;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-printed);
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body {
+    background: #e8e4de;
+    padding: 1rem;
+  }
+
+  .screen-note {
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 1px solid #c8b89a;
+    font-family: Georgia, serif;
+    font-size: 10pt;
+    color: #5a4a3a;
+  }
+
+  .screen-note a {
+    color: #5a4a3a;
+  }
+
+  .card-page {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    padding: 0.5in;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+}
+
+@media print {
+  .screen-note { display: none; }
+}
+
+/* ============================================================
+   Page = one grid of 4 quarters (2 x 2). The two relic cards
+   fill the top row; the bottom row is blank cut guides.
+   ============================================================ */
+
+.card-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: calc((10in - 0.2in) / 2) calc((10in - 0.2in) / 2);
+  gap: 0.2in;
+}
+
+.card-blank {
+  border: 1px dashed #d8cbb0;
+}
+
+/* ============================================================
+   Card styling (bone/sepia relic theme)
+   ============================================================ */
+
+.card.relic {
+  border: 2px solid #7a5a3a;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.25in 0.3in;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.relic .card-name {
+  font-family: var(--font-inscription);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #2a1a0a;
+  border-bottom: 2px solid #7a5a3a;
+  padding-bottom: 0.08in;
+  margin: 0 0 0.06in 0;
+}
+
+.card.relic .card-source {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  color: #7a6a4a;
+  margin: 0 0 0.15in 0;
+}
+
+.card.relic .card-value {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #2a1a0a;
+  margin: 0;
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marginalia — handwriting specimen (pick a hand)</title>
+  <style>
+    /* ------------------------------------------------------------------
+       A comparison sheet for choosing the marginalia hand. Screen-only
+       working document: it is not a prop and is not on the print list.
+
+       Every sample below is the REAL marginal note from a real clue, set
+       at the size and column width it actually gets on the printed page
+       (6.70in column, matching .page-inside), so what you see here is
+       what comes out of the printer.
+       ------------------------------------------------------------------ */
+    @import url('../shared/fonts.css');
+
+    @font-face {
+      font-family: 'Kalam';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('../shared/fonts/kalam-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Patrick Hand';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('../shared/fonts/patrickhand-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Architects Daughter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('../shared/fonts/architectsdaughter-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Gloria Hallelujah';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('../shared/fonts/gloriahallelujah-latin.woff2') format('woff2');
+    }
+
+    body {
+      background: #e8e4de;
+      margin: 0;
+      padding: 2rem 1rem;
+      font-family: var(--font-book);
+      color: #1a1a1a;
+    }
+    .sheet {
+      background: #fff;
+      max-width: 8.5in;
+      margin: 0 auto 1.25rem auto;
+      padding: 0.5in 0.9in;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    h1 { font-family: var(--font-inscription); font-size: 15pt; margin: 0 0 0.15in 0; }
+    .intro { font-size: 10.5pt; line-height: 1.45; color: #4a3a2a; }
+    .intro code {
+      font-family: monospace;
+      background: #f4efe6;
+      padding: 0 0.15em;
+    }
+
+    .label {
+      font-family: sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6a5a4a;
+      margin-bottom: 0.12in;
+    }
+    .label .verdict { color: #2f6f3f; text-transform: none; letter-spacing: 0; font-style: italic; }
+    .label .warn    { color: #9b2c2c; text-transform: none; letter-spacing: 0; font-style: italic; }
+
+    /* The marginalia block, copied exactly from clue-print.css so the
+       samples print at true size. Only the font + size differ per option. */
+    .margin {
+      border-left: 3px solid #c8b89a;
+      margin: 0.06in 0 0.06in 0.15in;
+      padding-left: 0.12in;
+      color: #5a4a3a;
+      font-style: normal;
+    }
+    .body-ref {
+      font-size: 11.5pt;
+      line-height: 1.3;
+      margin: 0 0 0.06in 0;
+    }
+
+    .opt-kalam     .margin { font-family: 'Kalam', cursive;               font-size: 9.5pt;  line-height: 1.34; }
+    .opt-patrick   .margin { font-family: 'Patrick Hand', cursive;        font-size: 10.5pt; line-height: 1.32; }
+    .opt-architect .margin { font-family: 'Architects Daughter', cursive; font-size: 10.5pt; line-height: 1.34; }
+    .opt-gloria    .margin { font-family: 'Gloria Hallelujah', cursive;   font-size: 9pt;    line-height: 1.40; }
+
+    /* The body-text samples: the whole document in a hand, at the size
+       and leading it gets on the printed page. */
+    .body-sample { font-size: 10.5pt; line-height: 1.42; }
+    .body-sample strong { font-weight: 700; }
+    .body-sample h2 {
+      font-family: var(--font-inscription);
+      font-size: 10.8pt;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin: 0.06in 0 0.05in 0;
+      color: #2a1a0a;
+    }
+    .b-kalam     .body-sample { font-family: 'Kalam', cursive; }
+    .b-patrick   .body-sample { font-family: 'Patrick Hand', cursive; font-size: 11.5pt; }
+    .b-architect .body-sample { font-family: 'Architects Daughter', cursive; font-size: 11.5pt; }
+    .b-garamond  .body-sample { font-family: var(--font-printed); font-size: 11.5pt; line-height: 1.3; }
+  </style>
+</head>
+<body>
+
+<div class="sheet">
+  <h1>Choosing the hand</h1>
+  <p class="intro">
+    <strong>Part 1 sets the whole document in a hand</strong> — that is what is now live in
+    the clues. <strong>Part 2</strong> compares hands for the margin notes only.
+    Everything is real clue text at the size and column width it gets on the printed page,
+    so this is what comes out of the printer.
+    <br><br>
+    Sizes are tuned per font so the samples share a physical x-height — the fair comparison,
+    since a hand at a nominal 11pt prints much larger than a serif at 11pt.
+    <br><br>
+    This page is a working document for picking fonts. It is not a prop and is not on the
+    print checklist — say the word and I'll delete it.
+  </p>
+</div>
+
+<div class="sheet b-kalam">
+  <div class="label">Body — Kalam · 10.5pt
+    <span class="verdict">— currently live in the clues</span>
+  </div>
+  <div class="body-sample">
+    <h2>Wailing Stew (serves six, or curses one)</h2>
+    <p>Folk turn up their noses at my cooking until they've had a bowl of this, and then they
+      don't turn up anything ever again. It is not a kind supper. But a recipe is a recipe,
+      and mine are the best in three valleys, so mind the steps and don't you dare
+      substitute.</p>
+    <p><strong>Begin with a whole Ghost Pepper — and it must be the Ghost, for it is a thing
+      of pure Fire and nothing else carries the flame into the pot.</strong> Char it black
+      over the coals till the whole kitchen weeps, then drop it in.</p>
+  </div>
+</div>
+
+<div class="sheet b-patrick">
+  <div class="label">Body — Patrick Hand · 11.5pt
+    <span class="verdict">— rounder and slightly plainer; very easy to read</span>
+  </div>
+  <div class="body-sample">
+    <h2>Wailing Stew (serves six, or curses one)</h2>
+    <p>Folk turn up their noses at my cooking until they've had a bowl of this, and then they
+      don't turn up anything ever again. It is not a kind supper. But a recipe is a recipe,
+      and mine are the best in three valleys, so mind the steps and don't you dare
+      substitute.</p>
+    <p><strong>Begin with a whole Ghost Pepper — and it must be the Ghost, for it is a thing
+      of pure Fire and nothing else carries the flame into the pot.</strong> Char it black
+      over the coals till the whole kitchen weeps, then drop it in.</p>
+  </div>
+</div>
+
+<div class="sheet b-architect">
+  <div class="label">Body — Architects Daughter · 11.5pt
+    <span class="warn">— characterful, but no bold weight: the puzzle facts stop standing out</span>
+  </div>
+  <div class="body-sample">
+    <h2>Wailing Stew (serves six, or curses one)</h2>
+    <p>Folk turn up their noses at my cooking until they've had a bowl of this, and then they
+      don't turn up anything ever again. It is not a kind supper. But a recipe is a recipe,
+      and mine are the best in three valleys, so mind the steps and don't you dare
+      substitute.</p>
+    <p><strong>Begin with a whole Ghost Pepper — and it must be the Ghost, for it is a thing
+      of pure Fire and nothing else carries the flame into the pot.</strong> Char it black
+      over the coals till the whole kitchen weeps, then drop it in.</p>
+  </div>
+</div>
+
+<div class="sheet b-garamond">
+  <div class="label">Body — EB Garamond · 11.5pt
+    <span class="warn">— the previous setting, for reference: a printed book, not a hand</span>
+  </div>
+  <div class="body-sample">
+    <h2>Wailing Stew (serves six, or curses one)</h2>
+    <p>Folk turn up their noses at my cooking until they've had a bowl of this, and then they
+      don't turn up anything ever again. It is not a kind supper. But a recipe is a recipe,
+      and mine are the best in three valleys, so mind the steps and don't you dare
+      substitute.</p>
+    <p><strong>Begin with a whole Ghost Pepper — and it must be the Ghost, for it is a thing
+      of pure Fire and nothing else carries the flame into the pot.</strong> Char it black
+      over the coals till the whole kitchen weeps, then drop it in.</p>
+  </div>
+</div>
+
+<div class="sheet">
+  <h1>Part 2 — the margin notes</h1>
+  <p class="intro">
+    The margin notes are by a <em>different person</em> than whoever wrote the document
+    (“a different, shakier hand below”), so they use a second hand rather than the same one
+    shrunk. <strong>Architects Daughter is live</strong> — it has no bold, which rules it out
+    for body text but does not matter for a margin note.
+  </p>
+</div>
+
+<div class="sheet opt-kalam">
+  <div class="label">1 — Kalam · 9.5pt · x-height 0.53
+    <span class="warn">— same hand as the body; the margin stops reading as someone else</span>
+  </div>
+  <p class="body-ref">…and under it they unburdened; my right foot carried me down every dark road.</p>
+  <p class="margin"><em>(in the same hand, smaller:)</em> They keep my right hand and my
+    right foot as relics still, wrapped in cloth. Rest them upon the troubled; the gift
+    has not wholly left them.</p>
+  <p class="margin"><em>(scrawled sideways:)</em> Gloves, you fool. I lost a fingernail to
+    this stew and I'd not lose you one too. — G.P.</p>
+</div>
+
+<div class="sheet opt-patrick">
+  <div class="label">2 — Patrick Hand · 10.5pt · x-height 0.47
+    <span class="verdict">— very clear and rounded; reads a little modern and friendly</span>
+  </div>
+  <p class="body-ref">…and under it they unburdened; my right foot carried me down every dark road.</p>
+  <p class="margin"><em>(in the same hand, smaller:)</em> They keep my right hand and my
+    right foot as relics still, wrapped in cloth. Rest them upon the troubled; the gift
+    has not wholly left them.</p>
+  <p class="margin"><em>(scrawled sideways:)</em> Gloves, you fool. I lost a fingernail to
+    this stew and I'd not lose you one too. — G.P.</p>
+</div>
+
+<div class="sheet opt-architect">
+  <div class="label">3 — Architects Daughter · 10.5pt · x-height 0.43 — LIVE
+    <span class="verdict">— a pencil hand, clearly a different person from the body</span>
+  </div>
+  <p class="body-ref">…and under it they unburdened; my right foot carried me down every dark road.</p>
+  <p class="margin"><em>(in the same hand, smaller:)</em> They keep my right hand and my
+    right foot as relics still, wrapped in cloth. Rest them upon the troubled; the gift
+    has not wholly left them.</p>
+  <p class="margin"><em>(scrawled sideways:)</em> Gloves, you fool. I lost a fingernail to
+    this stew and I'd not lose you one too. — G.P.</p>
+</div>
+
+<div class="sheet opt-gloria">
+  <div class="label">4 — Gloria Hallelujah · 9pt · x-height 0.57
+    <span class="warn">— biggest x-height, but wide and bouncy; eats the most room</span>
+  </div>
+  <p class="body-ref">…and under it they unburdened; my right foot carried me down every dark road.</p>
+  <p class="margin"><em>(in the same hand, smaller:)</em> They keep my right hand and my
+    right foot as relics still, wrapped in cloth. Rest them upon the troubled; the gift
+    has not wholly left them.</p>
+  <p class="margin"><em>(scrawled sideways:)</em> Gloves, you fool. I lost a fingernail to
+    this stew and I'd not lose you one too. — G.P.</p>
+</div>
+
+</body>
+</html>

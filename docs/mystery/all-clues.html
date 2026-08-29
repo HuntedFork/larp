@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Clues — Mystery (print all 11 at once)</title>
+  <link rel="stylesheet" href="./clue-print.css">
+  <style>
+    /* Screen-only chrome. Nothing here reaches the printed page. */
+    @media print {
+      .screen-back, .sheet-head, .load-status { display: none !important; }
+    }
+    @media screen {
+      .sheet-head {
+        display: block;
+        max-width: 8.5in;
+        margin: 1.5rem auto 0.25rem auto;
+        padding: 0.4rem 0.6rem;
+        background: #2a1a0a;
+        color: #f4efe6;
+        font-family: sans-serif;
+        font-size: 13px;
+        line-height: 1.5;
+        border-radius: 3px;
+      }
+      .sheet-head .sheet-no {
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: #c8b89a;
+        display: block;
+      }
+      .sheet-head .goes-to { color: #e8d9bd; font-style: italic; }
+      .load-status {
+        max-width: 8.5in;
+        margin: 0 auto 1rem auto;
+        padding: 0.5rem 0.75rem;
+        font-family: sans-serif;
+        font-size: 13px;
+        border-left: 4px solid #6a5a4a;
+        background: #f4efe6;
+      }
+      .load-status.ok { border-left-color: #2f6f3f; }
+      .load-status.bad { border-left-color: #9b2c2c; color: #9b2c2c; }
+    }
+  </style>
+</head>
+<body>
+  <p class="screen-back">
+    <a href="./index.html">← Back to Mystery</a><br>
+    <strong>All 11 clues in one print job.</strong> Print <strong>DOUBLE-SIDED</strong>, flip on
+    the <strong>SHORT edge</strong>. Each clue is exactly two pages, so every sheet comes out as
+    one complete clue: cover on the front, lore on the back. You get <strong>11 sheets</strong>,
+    in clue order.<br>
+    Then <strong>fold each sheet in half across the short edge</strong> (horizontal crease at the
+    middle) with the cover facing out, and staple the open edge. Each becomes an
+    8.5&nbsp;×&nbsp;5.5 folded card.<br>
+    <strong>Two to do by hand afterwards:</strong> tear <strong>Clue 8</strong> in half (a half to
+    each beastman), and put <strong>Clue 4</strong> in the saint's box unopened.
+  </p>
+
+  <div class="load-status" id="load-status">Loading clues…</div>
+
+  <div id="all-clues"></div>
+
+  <script>
+    /* ------------------------------------------------------------------
+       Each clue lives in its own file (clue1.html … clue11.html). Rather
+       than duplicate the lore here — which would rot the moment a clue is
+       edited — we fetch each file and lift its two .page elements out.
+       This page is therefore always in sync with the individual clues.
+
+       Order matters: every clue is exactly 2 pages (cover, then inside),
+       so duplex printing pairs them onto one sheet each.
+
+       "goesTo" mirrors the clue table in the Props Checklist.
+       ------------------------------------------------------------------ */
+    const CLUES = [
+      { num: 1,  file: 'clue1.html',  goesTo: "The Rat Witch's stock (1:00)" },
+      { num: 2,  file: 'clue2.html',  goesTo: 'Merchant Starter Pack A (game start)' },
+      { num: 3,  file: 'clue3.html',  goesTo: 'Merchant Starter Pack B (game start)' },
+      { num: 4,  file: 'clue4.html',  goesTo: "The saint's box — goes in UNOPENED (before game start)" },
+      { num: 5,  file: 'clue5.html',  goesTo: "The Scholar's mysterious message (game start)" },
+      { num: 6,  file: 'clue6.html',  goesTo: 'The Courier — Second Shipment, 3 coins (3:30)' },
+      { num: 7,  file: 'clue7.html',  goesTo: 'A Cups treasure (2:30)' },
+      { num: 8,  file: 'clue8.html',  goesTo: 'The two beastmen — TEAR IN HALF, a half each (2:00)' },
+      { num: 9,  file: 'clue9.html',  goesTo: 'Library setup (before game start)' },
+      { num: 10, file: 'clue10.html', goesTo: 'Library setup (before game start)' },
+      { num: 11, file: 'clue11.html', goesTo: "Pile o' Post, post 1 (12:00)" }
+    ];
+
+    (async function () {
+      const container = document.getElementById('all-clues');
+      const status = document.getElementById('load-status');
+      const parser = new DOMParser();
+      const failed = [];
+      let sheet = 0;
+
+      for (const clue of CLUES) {
+        try {
+          const response = await fetch('./' + clue.file);
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          const doc = parser.parseFromString(await response.text(), 'text/html');
+
+          const pages = doc.querySelectorAll('.page');
+          if (pages.length !== 2) {
+            throw new Error('expected 2 pages, found ' + pages.length);
+          }
+
+          sheet++;
+
+          // Screen-only banner naming the clue and where the prop ends up.
+          const title = (doc.title || ('Clue ' + clue.num)).replace(/\s+/g, ' ').trim();
+          const head = document.createElement('div');
+          head.className = 'sheet-head';
+          head.innerHTML =
+            '<span class="sheet-no">Sheet ' + sheet + ' of ' + CLUES.length + '</span>' +
+            '<strong></strong><br><span class="goes-to"></span>';
+          head.querySelector('strong').textContent = title;
+          head.querySelector('.goes-to').textContent = '→ ' + clue.goesTo;
+          container.appendChild(head);
+
+          // Cover page, then inside page — keeps the duplex pairing correct.
+          for (const page of pages) {
+            container.appendChild(document.importNode(page, true));
+          }
+        } catch (err) {
+          failed.push('Clue ' + clue.num + ' (' + err.message + ')');
+        }
+      }
+
+      if (failed.length) {
+        status.className = 'load-status bad';
+        status.innerHTML =
+          '<strong>DO NOT PRINT YET — ' + failed.length + ' clue(s) failed to load:</strong> ' +
+          failed.join(', ') + '.<br>This page loads the clue files over the network, so it must ' +
+          'be served over http (a local web server or the published site), not opened straight ' +
+          'from disk with a file:// URL. Every other loader page in this project has the same ' +
+          'requirement.';
+      } else {
+        status.className = 'load-status ok';
+        status.textContent =
+          'All ' + sheet + ' clues loaded — ' + (sheet * 2) + ' pages, ' + sheet +
+          ' double-sided sheets. Ready to print.';
+      }
+    })();
+  </script>
+</body>
+</html>

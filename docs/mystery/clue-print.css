@@ -1,14 +1,24 @@
 /* ============================================================
    Shared print stylesheet for Mystery Clue fold-in-half props
-   (used by clue2.html … clue8.html; clue1 keeps its own copy)
+   (used by clue2.html … clue11.html; clue1 keeps its own copy)
+
+   TYPE: the clues are in-world documents, so they are set in
+   period faces rather than a system serif (see shared/fonts.css):
+     - body text  = EB Garamond, an old-style book serif
+     - headings & cover stamps = Cinzel, Roman inscriptional caps
+     - marginalia = Kalam, a legible ink hand, so notes "in a later
+       hand" read as written in rather than typeset
+   Every one falls back to Georgia/cursive, so a missing font file
+   degrades to the old look instead of breaking the prop.
 
    PRINTING: Print DOUBLE-SIDED on ONE letter sheet.
-     - Front side of paper = the COVER page ("DO NOT OPEN").
+     - Front side of paper = the COVER page (a plain "Clue N"
+       label; only Clue 4 carries a "DO NOT OPEN" gate).
      - Back  side of paper = the INSIDE lore page.
    FOLDING: Fold the sheet in half across the SHORT edge (a
      horizontal crease at the vertical midline), COVER facing out.
      The result is a half-letter (8.5 x 5.5) folded card:
-       - front  = DO NOT OPEN (upright)
+       - front  = the cover (upright)
        - inside = the lore document (upright when opened)
      Staple the open edge.
 
@@ -16,7 +26,14 @@
    180deg so it reads upright once folded. The LORE fills the whole
    of page 2 (it flows across the fold crease and reads continuously
    when the card is opened flat) so nothing gets clipped.
+
+   NOTE: .page-inside is a fixed-height box with overflow:hidden —
+   text that outgrows it is silently cut off on the printed prop.
+   After changing type size or spacing here, re-run
+   `python3 tools/check-clue-fit.py` to confirm every clue still fits.
    ============================================================ */
+
+@import url('../shared/fonts.css');
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -29,7 +46,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Georgia, serif;
+  font-family: var(--font-book);
   color: #1a1a1a;
   background: #fff;
 }
@@ -103,6 +120,7 @@ html, body {
   text-align: center;
 }
 .cover .clue-label {
+  font-family: var(--font-inscription);
   font-size: 13pt;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -110,23 +128,35 @@ html, body {
   margin-bottom: 0.5in;
 }
 .cover .do-not-open {
-  font-size: 40pt;
-  font-weight: bold;
-  letter-spacing: 0.12em;
+  font-family: var(--font-inscription);
+  font-size: 34pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   color: #2a1a0a;
   border: 3px solid #2a1a0a;
-  padding: 0.25in 0.5in;
+  padding: 0.25in 0.45in;
+}
+/* Gate condition under the DO NOT OPEN stamp (clue 4 only) */
+.cover .gate {
+  font-size: 14pt;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  color: #2a1a0a;
+  margin-top: 0.35in;
+  max-width: 5in;
 }
 /* Alternate cover stamp for library documents (smaller text fits on one box) */
 .cover .property-of {
-  font-size: 30pt;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
+  font-family: var(--font-inscription);
+  font-size: 26pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
   text-align: center;
   color: #2a1a0a;
   border: 3px double #2a1a0a;
-  padding: 0.35in 0.55in;
+  padding: 0.35in 0.5in;
 }
 
 
@@ -150,38 +180,53 @@ html, body {
   top: 50%;
   border-top: 1px dashed #ddd;
 }
-.inside { font-size: 10.5pt; line-height: 1.4; }
+/* The clues are handwritten artifacts, so the document body is a hand.
+   Kalam's x-height is ~30% larger than a serif's at the same nominal
+   size, so 10.5pt here prints about as large as 11.5pt Garamond did.
+   The leading is generous (1.42) because a hand needs more air between
+   lines than a serif to stay readable. Verified with check-clue-fit.py. */
+.inside { font-size: 10.5pt; line-height: 1.42; }
 
 .inside .frontispiece {
-  font-style: italic;
-  font-size: 9pt;
+  font-weight: 300;
+  font-size: 9.5pt;
   color: #4a3a2a;
   margin: 0 0 0.08in 0;
 }
 .inside h2 {
-  font-size: 11pt;
+  font-family: var(--font-inscription);
+  font-size: 10.8pt;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
   margin: 0.06in 0 0.05in 0;
   color: #2a1a0a;
 }
 .inside p { margin: 0 0 0.07in 0; }
-.inside strong { font-weight: bold; }
+/* Kalam has a real bold, so the puzzle facts still stand out in hand. */
+.inside strong { font-weight: 700; }
 .inside em { font-style: italic; }
 .inside hr {
   border: none;
   border-top: 1px solid #c8b89a;
   margin: 0.08in 0;
 }
+/* Marginalia are by a DIFFERENT person than the document's author, so
+   they get a second, visibly different hand rather than the same one
+   shrunk. Architects Daughter reads as pencil against Kalam's ink. */
 .inside .margin {
   border-left: 3px solid #c8b89a;
   margin: 0.06in 0 0.06in 0.15in;
   padding-left: 0.12in;
   color: #5a4a3a;
-  font-style: italic;
-  font-size: 8.5pt;
+  font-family: var(--font-hand);
+  font-style: normal;
+  font-size: 9.5pt;
+  line-height: 1.4;
 }
 .inside .signoff {
   margin-top: 0.12in;
-  font-style: italic;
+  font-weight: 300;
   color: #4a3a2a;
 }
 .inside .verse {

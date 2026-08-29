@@ -6,17 +6,15 @@
   first horizontal rule so it is not part of the prop.
 - Fold the remaining sheet in half so the **Outside** faces out and the **Inside** is
   hidden. Staple the open edge shut.
-- Players see only the **Outside** until the gate is met. The **Inside** is the lore
+- Players see only the **Outside** before opening it. The **Inside** is the lore
   document; the **bold** phrases are the embedded clues.
-- Gate condition is a placeholder — set the real "DO NOT OPEN" quest later.
+- No gate — clue outsides are plain labels (only Clue 4 keeps a DO NOT OPEN gate).
 
 ---
 
 ## Outside (front of the fold)
 
 > **Clue 1**
->
-> **DO NOT OPEN** *(gate to be assigned)*
 
 ---
 

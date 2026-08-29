@@ -1,0 +1,121 @@
+/* ============================================================
+   Print stylesheet for Snake Oils
+   - Same fold-over label pattern as potion-labels-print.css:
+     each label folds in half on its LONG edge, producing two
+     stacked landscape panels; instructions face INWARD.
+   - 6 labels per page. The exterior panel is normally BLANK;
+     the one bad label carries a star on its outside.
+   ============================================================ */
+
+:root {
+  /* Folded panel dimensions — slightly smaller than a business card */
+  --panel-w: 3.3in;
+  --panel-h: 1.85in;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+@page {
+  size: letter portrait;
+  margin: 0.5in;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body {
+    background: #e8e4de;
+    padding: 1rem;
+  }
+  .screen-note { max-width: 8in; margin: 0 auto 1rem auto; }
+  .sheet {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    padding: 0.5in;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+}
+
+@media print {
+  .screen-note { display: none; }
+}
+
+/* ============================================================
+   SHEET — one page of labels (2 columns x 3 rows = 6)
+   ============================================================ */
+.sheet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25in;
+  justify-content: flex-start;
+  align-content: flex-start;
+  page-break-after: always;
+  break-after: page;
+}
+
+.sheet:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* ============================================================
+   FOLD-OVER LABELS
+   A single label = two stacked panels + a fold line between them.
+   First panel = OUTSIDE of the fold, second = hidden instructions.
+   ============================================================ */
+.label {
+  width: var(--panel-w);
+  border: 1px solid #333;          /* cut border */
+  page-break-inside: avoid;
+  break-inside: avoid;
+  background: #fff;
+}
+
+.panel {
+  width: 100%;
+  height: var(--panel-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.15in;
+}
+
+/* Fold line = the long edge crease between the two panels */
+.fold-line {
+  height: 0;
+  border-top: 1px dashed #999;
+}
+
+/* Exterior panel: blank on ordinary labels */
+.panel-out {
+  background: #f7f3ec;
+}
+
+.panel-out .star {
+  font-size: 36pt;
+  color: #8a6a1a;
+}
+
+/* Interior panel: the instructions, hidden once folded */
+.instruction {
+  font-size: 14pt;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+@media screen {
+  .label {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+}

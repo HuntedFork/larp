@@ -134,7 +134,9 @@ Target: **8 documents** (up from last year's ~6). Spreading the 12 clues across 
 means each doc carries only **1–2 clues** — no crammed 3-clue doc — which reads more
 naturally and is easier to write/review. Each doc is a self-contained in-world lore piece
 with an author/voice; the listed clues are the **bolded** facts hidden inside. Gating
-conditions ("DO NOT OPEN unless…") to be tuned later in last-year style.
+(decided 2026-08-27): outsides are plain "Clue N" labels — the DO NOT OPEN gates were
+dropped from every document **except D4** (`clue4.html`), whose cover reads *"DO NOT OPEN
+until you have assembled the bones of the saint."*
 
 
 | Doc | Working Title | Voice / Type | Clues carried | Notes |
@@ -142,7 +144,7 @@ conditions ("DO NOT OPEN unless…") to be tuned later in last-year style.
 | **D1** | *A Bestiary of the Heart* (Cindralok entry) | Naturalist's catalogue entry | **C1** (Cindralok=Fire, explicit) + **C11** (the stag is none of flame/flood/stone/soul) | Opens the fire seed loudly; sneaks the stag negatives into a comparative aside. |
 | **D2** | *A Cook's Cursed Recipe* | A village cook's recipe for a monstrous dish | **C2** (Fire→Ghost Pepper) + **C3** (Water→Vile Glomphidious) | The two reagents appear as recipe ingredients with their **elements named in the steps** ("a Ghost Pepper, a thing of pure Fire…"). Distinct artifact/voice — no longer a ledger. |
 | **D3** | *A Judge's Ruling* | Court verdict quoting a merchant AND a bone-setter | **C4** (Earth→Rock Salt) + **C6** (Body→Bone Dust) | A fraud case: the merchant sold **sea salt** as Rock Salt and **chalk** as Bone Dust. The **bone-setter's rebuttal states the elemental truths** (Earth needs true Rock Salt; Body needs true Bone Dust) → delivers both pairings. Verdict: merchant fined for false advertising; bone-setter arrested for attempting to buy illegal bones. |
-| **D4** | *The Alchemist's Journal — Eliminations* | Halbrecht Vunn, negative-inference notes | **C5** (Spirit→Amaranth, by elimination) | Vunn rules Amaranth OUT of the one rival element still open after D2+D3 (**¬Air**, core/load-bearing), plus a single margin **¬Body** confirmer, then names Spirit as the payoff. NOTE: reordered — D4 now carries **C5**, not C6 (C6 moved to D3). |
+| **D4** | *The Bones of the Saint* | The saint's own voice — her assembled skeleton sits up and speaks | **C5** (Spirit→Amaranth, delivered DIRECTLY) | Kept in the saint's box (her crypt, beneath the red tablecloth — see the Setup doc); the only gated clue: *"DO NOT OPEN until you have assembled the bones of the saint."* When the last bone slots into place the skeleton rattles upright, and Saint Merewen tells the story of her life, ending with her dying request that her crypt be dressed with **Amaranth, the Flower of the Spirit** — C5 stated outright, no elimination chain needed. NOTE: reordered — D4 carries **C5**, not C6 (C6 moved to D3). |
 | **D5** | *Letter on the River-God* | Villager/pilgrim letter | **C7** (Fish=Water) | A traveler's account placing Uggglub to the Water. |
 | **D6** | *The Forge-Warden's Testament* | Smith / miner's account | **C8** (Iron=Earth) | Ties Korrenvast to the deep stone/ore — Earth. |
 | **D7** | *The Goat-Kin's Record of the Madness* | First-person, written **by a beastperson (goat)** — unsettling, not-quite-human logic | **C9** (Nytheris=Spirit) + **C10** (Bear=Body, stag≠Body, framed as a protective prayer) | A record of how **Nytheris drove the beastmen mad** (last year's plague) and how they were **cured when the Ancient Mask drove her influence from the land**. C9 emerges from her being the soul/Spirit-stealer who hollowed their minds. C10 is folded in as a **prayer of protection against Nytheris's return** — invoking the Bear as the god of the steadfast Body (flesh that cannot be hollowed), and noting the stag is a different sort of power. Voice: reverent but eerie; the goat counts in fives, trusts smells over words, fears still water/reflections. |
@@ -157,6 +159,14 @@ any pairing. Their covers read **"PROPERTY OF THE LIBRARY"** (not "DO NOT OPEN")
 carry **no bolded clue** — they only frame the two axes so players know what they are
 solving. Files: `clue9.html`, `clue10.html`.
 
+### Pointer document (clue11.html)
+
+One further player-facing document, **Clue 11 — *The Record of the Consecration of the
+Saint***, carries **no grid clue**. It tells the players who the saint was — renowned for
+putting spirits at rest, both those in people and those that walked free — and that she
+was buried in Chicken's Rest **beneath the red tablecloth**. It is the pointer that leads
+players to the saint's box (her crypt), where D4 waits behind its bone-assembly gate.
+
 | Doc | Title | Establishes | Deliberately withheld |
 |-----|-------|-------------|-----------------------|
 | **P1** | *Of the Six Powers of the Deep Woods* | There are exactly **6 entities/powers** in the Deep Woods, each **bound to one of the 6 elements** (Fire/Water/Earth/Air/Spirit/Body), one-to-one. Names all six powers + all six elements. | **Which** power holds which element (no Entity↔Element pairing). No mention of ingredients. |
@@ -170,7 +180,7 @@ resolve any single element cell. They make the grid legible; the D1–D8 clues f
 ### Density note
 - **8 documents.** D1, D2, D3, and D7 carry 2 clues each; D4, D5, D6, and D8 carry 1 clue
   each. No document carries 3. The three element→reagent documents are now **three
-  distinct artifacts** (a cursed recipe, a judge's ruling, an alchemist's journal) rather
+  distinct artifacts** (a cursed recipe, a judge's ruling, a saint's speaking bones) rather
   than three near-identical ledger pages — this kills the "same page thrice" info-dump and
   reads far more naturally.
 
@@ -179,10 +189,10 @@ resolve any single element cell. They make the grid legible; the D1–D8 clues f
   e.g. missing D8 (C12) is survivable because the Air/Dogwheat pair is the last leftover
   and falls out by elimination from the others. Missing an L–I document (D2/D3/D4) is
   the most punishing — consider making those the easiest to obtain.
-- **D4 dependency note:** D4 delivers C5 (Spirit→Amaranth) by *elimination*, so it leans
-  on D2+D3 being solved first (to know Fire/Water/Earth/Body reagents). To keep it solvable
-  for weaker groups, Vunn still **names Spirit outright** as the payoff after the ¬Air
-  reasoning — the eliminations are flavor + robustness, not the sole path.
+- **D4 delivery note:** D4 now delivers C5 (Spirit→Amaranth) *directly* — the saint names
+  Amaranth "the Flower of the Spirit" as her dying request. There is no dependency on
+  D2+D3. The gate is physical rather than social: players must find the saint's box
+  (`clue11.html` points to it) and assemble the bones before opening it.
 
 
 ---

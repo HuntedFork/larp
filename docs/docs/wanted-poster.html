@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanted Poster (printable)</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 0.4in;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #2a1a0a;
+      background: #fff;
+    }
+
+    /* --- Screen preview --- */
+    @media screen {
+      body {
+        background: #e8e4de;
+        padding: 1rem;
+      }
+
+      .sheet {
+        background: #fdf8ee;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+        margin: 0 auto 1rem auto;
+      }
+
+      .screen-note, .page-tag {
+        max-width: 8.5in;
+        margin: 0 auto 0.25rem auto;
+        font-family: sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6a5a4a;
+      }
+
+      .screen-note {
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background: #fff;
+        border: 1px solid #c8b89a;
+        font-family: Georgia, serif;
+        font-size: 10pt;
+        letter-spacing: normal;
+        text-transform: none;
+        color: #5a4a3a;
+      }
+    }
+
+    @media print {
+      .screen-note, .page-tag {
+        display: none;
+      }
+    }
+
+    /* --- Sheets (one per printed page) --- */
+    .sheet {
+      width: 7.7in;
+      height: 10.2in;
+      margin: 0 auto;
+      background: #fdf8ee;
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .sheet:last-of-type {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    /* --- The outside cover ---
+       Content lives in the TOP half of the page, rotated 180deg, so it
+       reads upright on the front face once the sheet is folded in half
+       (cover out). The bottom half stays blank: it ends up on the back. */
+    .cover-half {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transform: rotate(180deg);
+    }
+
+    .cover-half .to {
+      font-variant: small-caps;
+      font-size: 12pt;
+      letter-spacing: 0.35em;
+      text-indent: 0.35em;
+      color: #5a4a3a;
+      margin-bottom: 0.15in;
+    }
+
+    .cover-half .addressee {
+      font-family: "Playfair Display", "Copperplate", Georgia, serif;
+      font-size: 54pt;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: #2a1a0a;
+      text-shadow: 1px 0 0 #2a1a0a, -0.5px 0 0 rgba(42,26,10,0.55);
+    }
+
+    .cover-half .urgent {
+      margin-top: 0.6in;
+      font-variant: small-caps;
+      font-size: 11pt;
+      letter-spacing: 0.3em;
+      text-indent: 0.3em;
+      color: #5a4a3a;
+      border-top: 0.75px solid #2a1a0a;
+      border-bottom: 0.75px solid #2a1a0a;
+      padding: 0.08in 0.3in;
+    }
+
+    /* Dashed fold-crease guides (light enough to ignore, handy when folding) */
+    .crease {
+      height: 0;
+      border-top: 1px dashed #bbb;
+    }
+
+    .crease-mid {
+      border-top: 1px dashed #ddd;
+      margin: 0 0.5in;
+    }
+
+    .screen-note a {
+      color: #5a4a3a;
+    }
+
+    /* --- The poster itself --- */
+    .poster {
+      height: 100%;
+      padding: 0.35in 0.4in 0.3in 0.4in;
+      border: 4px double #2a1a0a;
+      outline: 1.5px solid #2a1a0a;
+      outline-offset: 6px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .wanted {
+      font-family: "Playfair Display", "Copperplate", Georgia, serif;
+      font-size: 92pt;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      line-height: 0.95;
+      color: #2a1a0a;
+      text-transform: uppercase;
+      transform: scaleY(1.18);
+      transform-origin: center;
+      margin: 0.15in 0 0.02in 0;
+      /* worn-letterpress texture */
+      text-shadow: 1px 0 0 #2a1a0a, -0.5px 0 0 rgba(42,26,10,0.55);
+    }
+
+    .dead-or-alive {
+      font-variant: small-caps;
+      font-size: 13pt;
+      letter-spacing: 0.5em;
+      text-indent: 0.5em; /* balances the trailing letter-space */
+      margin: 0.08in 0 0.05in 0;
+    }
+
+    .rule {
+      border: none;
+      border-top: 2px solid #2a1a0a;
+      border-bottom: 0.75px solid #2a1a0a;
+      height: 4px;
+      margin: 0.08in 0.3in;
+    }
+
+    /* --- Open drawing space --- */
+    .draw-space {
+      flex: 1;
+      min-height: 2.5in;
+    }
+
+    /* --- Fill-in fields --- */
+    .fields {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: 0.15in;
+      padding-bottom: 0.15in;
+    }
+
+    .field {
+      display: flex;
+      align-items: baseline;
+      gap: 0.15in;
+      margin: 0.14in 0.15in 0 0.15in;
+      text-align: left;
+    }
+
+    .field .label {
+      font-variant: small-caps;
+      font-weight: bold;
+      font-size: 14pt;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .field .write-space {
+      flex: 1;
+      height: 0.9in;
+    }
+
+    .footer {
+      font-variant: small-caps;
+      font-size: 9pt;
+      letter-spacing: 0.25em;
+      color: #5a4a3a;
+      margin-top: 0.18in;
+    }
+  </style>
+</head>
+<body>
+  <p class="screen-note">
+    <a href="./index.html">← Back to Docs</a> —
+    Print <strong>DOUBLE-SIDED</strong> on letter paper: the <strong>wanted poster</strong>
+    on the front, the <strong>To: The Justice</strong> cover on the back. Fold in half with
+    the cover facing out (the address will read upright). Draw the culprit in the open space,
+    and write in the <em>For</em> (their crime) and <em>Punishment</em> by hand during the game.
+  </p>
+
+  <span class="page-tag">Inside — Wanted Poster (prints on the front side)</span>
+  <div class="sheet">
+    <div class="poster">
+      <div class="wanted">Wanted</div>
+      <div class="dead-or-alive">Alive, Definitely Alive</div>
+
+      <hr class="rule">
+
+      <div class="draw-space"></div>
+
+      <div class="fields">
+        <div class="field">
+          <span class="label">For:</span>
+          <span class="write-space"></span>
+        </div>
+        <div class="field">
+          <span class="label">Punishment:</span>
+          <span class="write-space"></span>
+        </div>
+      </div>
+
+      <div class="footer">By Order of the Town of Chicken's Rest</div>
+    </div>
+    <div class="crease-mid"></div>
+  </div>
+
+  <span class="page-tag">Outside — Cover (prints on the back side)</span>
+  <div class="sheet">
+    <div class="cover-half">
+      <div class="to">To:</div>
+      <div class="addressee">The Justice</div>
+      <div class="urgent">By Hand &mdash; With All Haste</div>
+    </div>
+    <div class="crease"></div>
+  </div>
+</body>
+</html>

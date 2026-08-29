@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Mods &amp; IndyMods — print all at once</title>
+  <link rel="stylesheet" href="./mod-print.css">
+  <link rel="stylesheet" href="./all-mods-print.css">
+</head>
+<body>
+  <p class="screen-back">
+    <a href="./index.html">← Back to Mods</a><br>
+    <strong>Every mod and IndyMod in one print job.</strong> Print <strong>single-sided</strong> —
+    each document starts on a fresh sheet, so no two mods share a page and a runner can take
+    just the sheets they need.<br>
+    Order matches the section index pages: the scheduled <strong>Mods</strong> first (in
+    timeline order), then the run-them-whenever <strong>IndyMods</strong> (alphabetical).<br>
+    <em>Card sheets are not included</em> — the Ghost Curse Cards and Poison Cards are separate
+    printables; see the Print Checklist.
+  </p>
+
+  <div class="load-status" id="load-status">Loading mods…</div>
+
+  <!-- Everything renders inside one #mod-content so the existing
+       mod-print.css typography applies unchanged. -->
+  <div id="mod-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    /* ------------------------------------------------------------------
+       Mods and IndyMods are Markdown under docs/<section>/files/*.md,
+       normally rendered one at a time by mod.html / indymod.html. This
+       page fetches every one of them and renders them into a single
+       document, so the whole set can be printed in one go.
+
+       Nothing is duplicated here — the Markdown files remain the single
+       source of truth, so this page cannot fall out of date.
+
+       This file lives in docs/mods/ deliberately: the mod Markdown uses
+       relative links like ../indymods/... and ../rituals/..., which
+       resolve correctly from any docs/<section>/ folder, so IndyMods
+       render here with working links too.
+
+       Order mirrors the two section index pages: mods in timeline order,
+       IndyMods alphabetical.
+       ------------------------------------------------------------------ */
+    const SECTIONS = [
+      {
+        label: 'Mods — scheduled encounters (timeline order)',
+        dir: '../mods/files/',
+        files: [
+          'ghost-invasion', 'rat-witch', 'cups', 'he-said-she-said',
+          'beastmen-come-to-town', 'priest-of-the-old-gods', 'necromancer-attack',
+          'falling-star', 'terrible-healing', 'the-play', 'shipments',
+          'dance-fighting', 'antidote-fight'
+        ]
+      },
+      {
+        label: 'IndyMods — run whenever, not scheduled',
+        dir: '../indymods/files/',
+        files: [
+          'arguing-professors', 'assassination', 'beastman-instructions',
+          'beastmans-body', 'bridge-guardian', 'deer-in-the-woods',
+          'ghost-instructions', 'ghost-knight-fights', 'ghost-knight-instructions',
+          'make-your-own-ghost', 'map-and-portrait'
+        ]
+      }
+    ];
+
+    (async function () {
+      const container = document.getElementById('mod-content');
+      const status = document.getElementById('load-status');
+      const failed = [];
+      let sheet = 0;
+
+      for (const section of SECTIONS) {
+        // Screen-only divider between the two sets.
+        const sectionHead = document.createElement('div');
+        sectionHead.className = 'section-head';
+        sectionHead.textContent = section.label;
+        container.appendChild(sectionHead);
+
+        for (const file of section.files) {
+          try {
+            const response = await fetch(section.dir + file + '.md');
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            const markdown = await response.text();
+
+            const doc = document.createElement('article');
+            doc.className = 'mod-doc';
+            doc.innerHTML = marked.parse(markdown);
+
+            sheet++;
+
+            // Screen-only caption above each sheet.
+            const h1 = doc.querySelector('h1');
+            const head = document.createElement('div');
+            head.className = 'sheet-head';
+            head.innerHTML = '<span class="sheet-no"></span><strong></strong>';
+            head.querySelector('.sheet-no').textContent = 'Sheet ' + sheet;
+            head.querySelector('strong').textContent =
+              h1 ? h1.textContent : file;
+            container.appendChild(head);
+            container.appendChild(doc);
+          } catch (err) {
+            failed.push(file + ' (' + err.message + ')');
+          }
+        }
+      }
+
+      const total = SECTIONS.reduce((n, s) => n + s.files.length, 0);
+
+      if (failed.length) {
+        status.className = 'load-status bad';
+        status.innerHTML =
+          '<strong>DO NOT PRINT YET — ' + failed.length + ' of ' + total +
+          ' document(s) failed to load:</strong> ' + failed.join(', ') +
+          '.<br>This page loads the Markdown files over the network, so it must be served ' +
+          'over http (a local web server or the published site), not opened straight from ' +
+          'disk with a file:// URL. Every other loader page in this project has the same ' +
+          'requirement.';
+      } else {
+        status.className = 'load-status ok';
+        status.textContent =
+          'All ' + sheet + ' documents loaded (' + SECTIONS[0].files.length + ' mods + ' +
+          SECTIONS[1].files.length + ' indymods) — ' + sheet +
+          ' single-sided sheets minimum, longer mods run onto extra pages. Ready to print.';
+      }
+    })();
+  </script>
+</body>
+</html>

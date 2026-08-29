@@ -1,0 +1,143 @@
+/* ============================================================
+   Print stylesheet for Last Year's Clues (archive)
+   - One clue per letter page: a "Chicken's Rest Historical
+     Document / Accuracy Unknown" stamp, then the document body.
+   - A final storyteller page explains the solution in character;
+     it is the only page that still carries a warning header.
+   ============================================================ */
+
+@page {
+  size: letter portrait;
+  margin: 0.6in;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 11.5pt;
+  line-height: 1.5;
+}
+
+/* --- Screen preview --- */
+@media screen {
+  body {
+    background: #e8e4de;
+    padding: 1rem;
+  }
+
+  .screen-note { max-width: 8in; margin: 0 auto 1rem auto; }
+
+  .clue-page {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto 1rem auto;
+    padding: 0.6in;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+}
+
+@media print {
+  .screen-note { display: none; }
+}
+
+/* ============================================================
+   CLUE PAGE — one per sheet of paper
+   ============================================================ */
+.clue-page {
+  page-break-after: always;
+  break-after: page;
+}
+
+.clue-page:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* The header — an archivist's stamp rather than a play gate. Last year's
+   opening conditions were retired; these are now filed as town records of
+   uncertain provenance. */
+.gate {
+  text-align: center;
+  margin: 0 0 0.3in 0;
+  padding-bottom: 0.15in;
+  border-bottom: 1.5px solid #8a7a6a;
+}
+
+.gate .archive-stamp {
+  font-size: 16pt;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3a1a5a;
+  margin: 0 0 0.06in 0;
+}
+
+.gate .accuracy {
+  font-size: 11pt;
+  font-style: italic;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5a4a3a;
+  margin: 0;
+}
+
+/* Retained for the storyteller solution page only (see below). */
+.gate .do-not-open {
+  font-size: 22pt;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: #3a1a5a;
+  margin: 0 0 0.1in 0;
+}
+
+.gate .condition {
+  font-size: 11pt;
+  font-style: italic;
+  color: #5a4a3a;
+  margin: 0;
+}
+
+/* The document body */
+.clue-body h2 {
+  font-size: 13pt;
+  margin: 0 0 0.08in 0;
+  color: #2a1a0a;
+}
+
+.clue-body .byline {
+  font-style: italic;
+  color: #5a4a3a;
+  margin: 0 0 0.12in 0;
+}
+
+.clue-body p {
+  margin: 0 0 0.1in 0;
+}
+
+.clue-body blockquote {
+  margin: 0.05in 0 0.12in 0.25in;
+  font-style: italic;
+}
+
+.clue-body .chant {
+  text-align: center;
+  font-style: italic;
+  margin: 0.1in 0;
+}
+
+.clue-body .signature {
+  text-align: right;
+  font-style: italic;
+}
+
+/* The final solution page reads as a found letter */
+.solution-page .gate .do-not-open {
+  color: #7a1a1a;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cups — Poison Cards</title>
+  <link rel="stylesheet" href="./cups-poison-cards-print.css">
+</head>
+<body>
+  <p class="screen-note">
+    <a href="./mod.html?file=cups">← Back to the Cups mod</a> —
+    The Rat Witch's poison, formatted like a potion. Print single-sided, 8 cards to a page;
+    cut along the borders and tuck them into her losing cups.
+  </p>
+
+  <div id="card-container">
+    <!-- Cards are injected here -->
+  </div>
+
+  <script>
+    // The Rat Witch's poison — one type, printed 8 to a page.
+    const POISONS = [
+      {
+        name: "Poison",
+        source: "The Rat Witch's Experiments",
+        effect: "You feel horribly nauseous. You are Injured for the next 10 minutes or until you vomit (not for real).",
+        count: 8
+      }
+    ];
+
+    (function render() {
+      const container = document.getElementById('card-container');
+
+      POISONS.forEach(function (poison) {
+        const page = document.createElement('div');
+        page.className = 'card-page';
+
+        for (let i = 0; i < poison.count; i++) {
+          const card = document.createElement('div');
+          card.className = 'card poison';
+
+          const nameEl = document.createElement('div');
+          nameEl.className = 'card-name';
+          nameEl.textContent = poison.name;
+          card.appendChild(nameEl);
+
+          const srcEl = document.createElement('div');
+          srcEl.className = 'card-source';
+          srcEl.textContent = poison.source;
+          card.appendChild(srcEl);
+
+          const effectEl = document.createElement('div');
+          effectEl.className = 'card-value';
+          effectEl.textContent = poison.effect;
+          card.appendChild(effectEl);
+
+          page.appendChild(card);
+        }
+
+        container.appendChild(page);
+      });
+    })();
+  </script>
+</body>
+</html>
